@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/anatoly/projects/test_task/main.cpp
+iostream
+-
+stdio.h
+-
+algorithm
+-
+vector
+-
+ctype.h
+-
+cassert
+-
+
