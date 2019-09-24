@@ -4,16 +4,24 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/anatoly/projects/test_task/Defenitions.cpp" "/home/anatoly/projects/test_task/cmake-build-debug/CMakeFiles/test_task.dir/Defenitions.cpp.o"
   "/home/anatoly/projects/test_task/main.cpp" "/home/anatoly/projects/test_task/cmake-build-debug/CMakeFiles/test_task.dir/main.cpp.o"
+  "/home/anatoly/projects/test_task/tests/testing.cpp" "/home/anatoly/projects/test_task/cmake-build-debug/CMakeFiles/test_task.dir/tests/testing.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "../tests/googletest/include"
+  "../tests/googlemock/include"
+  "../tests/googletest/googletest/include"
+  "../tests/googletest/googletest"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
+  "/home/anatoly/projects/test_task/cmake-build-debug/tests/googletest/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
+  "/home/anatoly/projects/test_task/cmake-build-debug/tests/googletest/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

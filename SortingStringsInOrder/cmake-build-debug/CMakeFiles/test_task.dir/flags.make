@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=gnu++14
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -I/home/anatoly/projects/test_task/tests/googletest/include -I/home/anatoly/projects/test_task/tests/googlemock/include -isystem /home/anatoly/projects/test_task/tests/googletest/googletest/include -isystem /home/anatoly/projects/test_task/tests/googletest/googletest 
 

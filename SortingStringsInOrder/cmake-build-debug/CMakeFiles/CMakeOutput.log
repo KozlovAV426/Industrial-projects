@@ -631,3 +631,31 @@ make[1]: выход из каталога «/home/anatoly/projects/test_task/cma
     Feature record: CXX_FEATURE:0cxx_variable_templates
     Feature record: CXX_FEATURE:0cxx_variadic_macros
     Feature record: CXX_FEATURE:0cxx_variadic_templates
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/anatoly/projects/test_task/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_00cad/fast"
+/usr/bin/make -f CMakeFiles/cmTC_00cad.dir/build.make CMakeFiles/cmTC_00cad.dir/build
+make[1]: вход в каталог «/home/anatoly/projects/test_task/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_00cad.dir/CheckIncludeFile.c.o
+/usr/bin/gcc    -o CMakeFiles/cmTC_00cad.dir/CheckIncludeFile.c.o   -c /home/anatoly/projects/test_task/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_00cad
+/home/anatoly/clion-2018.2.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_00cad.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_00cad.dir/CheckIncludeFile.c.o  -o cmTC_00cad 
+make[1]: выход из каталога «/home/anatoly/projects/test_task/cmake-build-debug/CMakeFiles/CMakeTmp»
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/anatoly/projects/test_task/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_10e84/fast"
+/usr/bin/make -f CMakeFiles/cmTC_10e84.dir/build.make CMakeFiles/cmTC_10e84.dir/build
+make[1]: вход в каталог «/home/anatoly/projects/test_task/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_10e84.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_10e84.dir/CheckFunctionExists.c.o   -c /home/anatoly/clion-2018.2.4/bin/cmake/linux/share/cmake-3.12/Modules/CheckFunctionExists.c
+Linking C executable cmTC_10e84
+/home/anatoly/clion-2018.2.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_10e84.dir/link.txt --verbose=1
+/usr/bin/gcc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_10e84.dir/CheckFunctionExists.c.o  -o cmTC_10e84 -lpthread 
+make[1]: выход из каталога «/home/anatoly/projects/test_task/cmake-build-debug/CMakeFiles/CMakeTmp»
+
+
