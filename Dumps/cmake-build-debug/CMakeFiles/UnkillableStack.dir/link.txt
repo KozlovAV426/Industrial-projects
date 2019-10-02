@@ -1,0 +1,1 @@
+/usr/bin/g++  -g   CMakeFiles/UnkillableStack.dir/main.cpp.o CMakeFiles/UnkillableStack.dir/Dump.cpp.o  -o UnkillableStack 

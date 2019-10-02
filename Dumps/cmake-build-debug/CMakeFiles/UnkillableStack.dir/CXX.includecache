@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/anatoly/projects/UnkillableStack/Stack.h
+cstddef
+-
+utility
+-
+memory
+-
+iostream
+-
+cassert
+-
+fstream
+-
+typeinfo
+-
+type_traits
+-
+cxxabi.h
+-
+
+/home/anatoly/projects/UnkillableStack/main.cpp
+Stack.h
+/home/anatoly/projects/UnkillableStack/Stack.h
+

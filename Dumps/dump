@@ -1,0 +1,21 @@
+Error checking is FAILED!!! From PATH:/home/anatoly/projects/UnkillableStack/Stack.h (695) in Push()
+UnkillableStack<T> stack with T = int () [0x7ffbffffb4d0]
+{
+ERROR CODE = 1 (CANARY_IS_NOT_VALID)
+BUFFER_SIZE = 12, REALSIZE = 5
+BUFFER [12] [0x565557768e70]
+{
+  [0]-666  (POISON)
+* [1] = 0
+* [2] = 1
+* [3] = 2
+* [4] = 3
+* [5] = 4
+  [6] = -666  (POISON)
+  [7] = -666  (POISON)
+  [8] = -666  (POISON)
+  [9] = -666  (POISON)
+  [10] = -666  (POISON)
+  [11] = -666  (POISON)
+}
+}
