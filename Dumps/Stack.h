@@ -1,10 +1,10 @@
 
-
 #pragma once
 
 #include <cstddef>
 #include <utility>
 #include <memory>
+#include <random>
 #include <iostream>
 #include <cassert>
 #include <fstream>
@@ -14,10 +14,15 @@
 
 
 
-
 #define VERIFED(code) Dump(code, __FILE__, __LINE__, __FUNCTION__) || (({assert(false);}), false)
 
 #define VARIABLE_NAME(name) GetVariableName(#name)
+
+
+
+
+const int SHIFT = time(0) % 100;
+
 
 
 enum ERRORS {
@@ -25,9 +30,8 @@ enum ERRORS {
     CANARY_IS_NOT_VALID,
     HASHES_DO_NOT_MATCH,
     POISONS_IS_NOT_VALID,
-    THIS_IS_A_NULLPTR
+    POINTER_DESTRUCTED
 };
-
 
 
 
@@ -37,34 +41,49 @@ public:
     const int static POISON = (T)(0xCACED426);
 };
 
+class IntViewer {
+public:
+    int operator() (int& elem) {
+        return elem;
+    }
+};
 
 
-template <typename T, typename Poison = DefaultPoison<T>, class Hash = std::hash<T>, size_t n = 10>
+
+
+
+template <typename T, class Viewer, typename Poison = DefaultPoison<T>, class Hash = std::hash<T>, size_t n = 10>
 class UnkillableStack {
 private:
     int canary_in_beginning = Poison::POISON;
 
-    T* buffer_;
     int buffer_size_;
     int top_;
     int real_size_;
 
-    Poison poison_;
     Hash hash_;
-    size_t checksum_ = 0;
+    Viewer viewer_;
+
+    T* buffer_;
+
+    size_t* checksum_;
     std::string name_;
+
     int canary_in_end = Poison::POISON;
 
     bool IsCanaryValid();
     bool IsHashValid();
     bool IsOtherCellsValid();
+
     size_t GetErrorNumber();
 
     int Dump(size_t code, const char* file_name, size_t line, const char* function_name);
 
     void ReallocateBuffer();
+    void StaticOutput(size_t code, const char *file_name, size_t line, const char *function_name, std::string error);
 
     size_t GetHash();
+    T* GetLocation();
 
 
 public:
@@ -73,14 +92,13 @@ public:
     ~UnkillableStack();
 
     template<typename ...Args>
-    void Push(Args &&... args);
+    void EmplaceBack(Args &&... args);
 
-    void PrintData() {
-        for (size_t i = 0; i < buffer_size_; ++i) {
-            std::cout << "buffer_[" << i << "] = " << buffer_[i] << std::endl;
-        }
-        std::cout << std::endl;
-    }
+    void Push(const T& elem);
+
+    void Clear();
+
+    T Top();
 
     void Pop();
 };
@@ -91,85 +109,142 @@ public:
 
 
 
-template <typename T, typename Poison, class Hash, size_t n>
-UnkillableStack <T, Poison, Hash, n>::UnkillableStack(std::string name)
+template <typename T, class Viewer, typename Poison, class Hash, size_t n>
+UnkillableStack <T, Viewer, Poison, Hash, n>::UnkillableStack(std::string name)
         : buffer_((T*)new char [sizeof(T) * (n + 2)])
         , buffer_size_(n + 2)
         , top_(1)
         , real_size_(0)
+        , checksum_(new size_t(0))
         , name_(name)
 
 {
+
             for (size_t i = 0; i < n + 2; ++i) {
                 buffer_[i] = Poison::POISON;
             }
-            checksum_ = GetHash();
+            buffer_ = (T*)((size_t*)(buffer_) - SHIFT);
+            *checksum_ = GetHash();
+
 }
 
-template <typename T, typename P, class H, size_t n>
-UnkillableStack<T, P, H, n>::~UnkillableStack() {
-    delete[] buffer_;
-}
-
-template <typename T, typename Poison, class Hash, size_t n>
-template <typename ...Args>
-void UnkillableStack<T, Poison, Hash, n>::Push(Args&&... args) {
+template <typename T, class Viewer, typename Poison, class Hash, size_t n>
+UnkillableStack<T, Viewer, Poison, Hash, n>::~UnkillableStack() {
     VERIFED(GetErrorNumber());
+    delete[] GetLocation();
+
+    buffer_ = nullptr;
+}
+
+
+template <typename T, class Viewer, typename Poison, class Hash, size_t n>
+T UnkillableStack<T, Viewer, Poison, Hash, n>::Top() {
+    assert(real_size_ >= 0);
+    VERIFED(GetErrorNumber());
+    return GetLocation()[top_ - 1];
+}
+
+
+
+template <typename T, class Viewer, typename Poison, class Hash, size_t n>
+void UnkillableStack<T, Viewer, Poison, Hash, n>::Clear() {
+    for (; real_size_;) {
+        Pop();
+    }
+}
+
+template <typename T, class Viewer, typename Poison, class Hash, size_t n>
+void UnkillableStack<T, Viewer, Poison, Hash, n>::Push(const T &elem) {
+    VERIFED(GetErrorNumber());
+
     if (buffer_size_ - real_size_ <= 3) {
         ReallocateBuffer();
     }
-    new(buffer_ + top_) T(std::forward<Args>(args)...);
+
+    new(GetLocation() + top_) T(elem);
+
     real_size_ += 1;
     top_ += 1;
-    checksum_ = GetHash();
+    *checksum_ = GetHash();
+
     VERIFED(GetErrorNumber());
 }
 
-template <typename T, typename Poison, class Hash, size_t n>
-void UnkillableStack<T, Poison, Hash, n>::Pop() {
+template <typename T, class Viewer, typename Poison, class Hash, size_t n>
+template <typename ...Args>
+void UnkillableStack<T, Viewer, Poison, Hash, n>::EmplaceBack(Args&&... args) {
+
     VERIFED(GetErrorNumber());
+
+    if (buffer_size_ - real_size_ <= 3) {
+        ReallocateBuffer();
+    }
+
+    new(GetLocation() + top_) T(std::forward<Args>(args)...);
+
+    real_size_ += 1;
+    top_ += 1;
+    *checksum_ = GetHash();
+
+    VERIFED(GetErrorNumber());
+}
+
+template <typename T, class Viewer, typename Poison, class Hash, size_t n>
+void UnkillableStack<T, Viewer, Poison, Hash, n>::Pop() {
+    VERIFED(GetErrorNumber());
+
     real_size_ -= 1;    assert(real_size_ >= 0);
     top_ -= 1;  assert(top_ >= 0);
-    buffer_[top_] = poison_();
-    checksum_ = GetHash();
+
+    (GetLocation() + top_)->~T();
+    GetLocation()[top_] = Poison::POISON;
+
+    *checksum_ = GetHash();
     VERIFED(GetErrorNumber());
 }
 
-template <typename T, typename P, class H, size_t n>
-size_t UnkillableStack<T, P, H, n> ::GetHash() {
+template <typename T, class Viewer, typename Poison, class Hash, size_t n>
+T* UnkillableStack<T, Viewer, Poison, Hash, n>::GetLocation() {
+    return (T*)((size_t*)(buffer_) + SHIFT);
+}
+
+template <typename T, class Viewer, typename Poison, class Hash, size_t n>
+size_t UnkillableStack<T, Viewer, Poison, Hash, n> ::GetHash() {
     size_t res_hash = 0;
-    size_t power = 1;
-    size_t p = 7;
-    for (size_t i = 1; i < real_size_; ++i) {
-        res_hash += hash_(buffer_[i]) * power;
-        power *= p;
-    }
+    res_hash = std::hash<std::string>()(std::string(reinterpret_cast<const char*>(this),
+            sizeof(UnkillableStack<T, Viewer, Poison, Hash, n>)));
+
+
+    res_hash += std::hash<std::string>()(std::string(reinterpret_cast<const char*>(GetLocation()),
+                                                    real_size_));
     return res_hash;
 }
 
-template <typename T, typename P, class H, size_t n>
-bool UnkillableStack<T, P, H, n>::IsCanaryValid() {
-    return (buffer_[0] == poison_() && buffer_[buffer_size_ - 1] == poison_()
+
+
+template <typename T, class Viewer, typename Poison, class Hash, size_t n>
+bool UnkillableStack<T, Viewer, Poison, Hash, n>::IsCanaryValid() {
+    return (GetLocation()[0] == Poison::POISON && GetLocation()[buffer_size_ - 1] == Poison::POISON
     && canary_in_beginning == Poison::POISON && canary_in_end == Poison::POISON);
 }
 
-template <typename T, typename P, class H, size_t n>
-bool UnkillableStack<T, P, H, n>::IsHashValid() {
-    return checksum_ == GetHash();
+template <typename T, class Viewer, typename Poison, class Hash, size_t n>
+bool UnkillableStack<T, Viewer, Poison, Hash, n>::IsHashValid() {
+    return *checksum_ == GetHash();
 }
 
-template <typename T, typename P, class H, size_t n>
-bool UnkillableStack<T, P, H, n>::IsOtherCellsValid() {
+template <typename T, class Viewer, typename Poison, class Hash, size_t n>
+bool UnkillableStack<T, Viewer, Poison, Hash, n>::IsOtherCellsValid() {
     for (size_t i = top_; i < buffer_size_ - 1; ++i) {
-        if (buffer_[i] != poison_()) return false;
+        if (GetLocation()[i] != Poison::POISON) return false;
     }
     return true;
 }
 
-template <typename T, typename P, class H, size_t n>
-size_t UnkillableStack<T, P, H, n>::GetErrorNumber() {
-    if (this == nullptr) {
-        return THIS_IS_A_NULLPTR;
+template <typename T, class Viewer, typename Poison, class Hash, size_t n>
+size_t UnkillableStack<T, Viewer, Poison, Hash, n>::GetErrorNumber() {
+    if (this == nullptr || buffer_ == nullptr) {
+        return POINTER_DESTRUCTED;
     }
     if (!IsCanaryValid()) {
         return ERRORS::CANARY_IS_NOT_VALID;
@@ -183,18 +258,23 @@ size_t UnkillableStack<T, P, H, n>::GetErrorNumber() {
     return ERRORS::NO_ERRORS;
 }
 
-template <typename T, typename P, class H, size_t n>
-void UnkillableStack<T, P, H, n>::ReallocateBuffer() {
+template <typename T, class Viewer, typename Poison, class Hash, size_t n>
+void UnkillableStack<T, Viewer, Poison, Hash, n>::ReallocateBuffer() {
     size_t new_size = buffer_size_ * 2;
+
     T* new_buffer = (T*)(new char[sizeof(T) * new_size]);
+
     for (size_t i = 0; i < buffer_size_; ++i) {
-        new (new_buffer + i) T(buffer_[i]);
+        new (new_buffer + i) T(GetLocation()[i]);
     }
+
     for (size_t i = buffer_size_; i < new_size; ++i) {
-        new (new_buffer + i) T(poison_());
+        new (new_buffer + i) T(Poison::POISON);
     }
-    delete[] buffer_;
+    delete[] GetLocation();
+
     buffer_ = new_buffer;
+    buffer_ = (T*)((size_t*)(buffer_) - SHIFT);
     buffer_size_ = new_size;
 }
 
@@ -202,18 +282,43 @@ inline std::string GetVariableName(std::string name) {
     return name;
 }
 
-template <typename T, typename P, class H, size_t n>
-inline std::string Demangle(UnkillableStack<T, P, H, n>* ptr);
+template <typename T, class Viewer, typename Poison, class Hash, size_t n>
+inline std::string Demangle(UnkillableStack<T, Viewer, Poison, Hash, n>* ptr);
 
-template <typename T, typename P, class H, size_t n>
-std::string Demangle(UnkillableStack<T, P, H, n>* ptr) {
+template <typename T, class Viewer, typename Poison, class Hash, size_t n>
+std::string Demangle(UnkillableStack<T, Viewer, Poison, Hash, n>* ptr) {
     int status = -1;
     std::string realname = abi::__cxa_demangle(typeid(T()).name(), nullptr, nullptr, &status);
     return (status == 0) ? realname : typeid(T()).name();
 }
 
-template <typename T, typename P, class H, size_t n>
-int UnkillableStack<T, P, H, n>::Dump(size_t code, const char *file_name, size_t line, const char *function_name) {
+template <typename T, class Viewer, typename Poison, class Hash, size_t n>
+void UnkillableStack<T, Viewer, Poison, Hash, n>::StaticOutput(size_t code, const char *file_name, size_t line,
+                                                       const char *function_name, std::string error) {
+    FILE* file = fopen("../dump", "w");
+    fprintf(file, "Error checking is FAILED!!! From PATH: %s (%d) in %s() \n", file_name, line, function_name);
+    if (error == "POINTER_DESTRUCTED") {
+        fclose(file);
+        return;
+    }
+    fprintf(file, "UnkillableStack<T> %s with T = %s [%x] \n", name_.c_str(), Demangle(this).c_str(), this);
+    fprintf(file, "{\nERROR CODE = %d (%s)\nBUFFER_SIZE = %d REALSIZE = %d\nBUFFER[%d][%x]\n{\n", code, error.c_str(),
+            buffer_size_, real_size_, buffer_size_, GetLocation());
+    fprintf(file, "  [0] = %d (POISON)\n", GetLocation()[0]);
+
+    for (size_t i = 1; i <= real_size_; ++i) {
+        fprintf(file, "* [%d] = %s\n", i, viewer_(GetLocation()[i]));
+    }
+    for (size_t i = std::max(1, real_size_ + 1); i < buffer_size_; ++i) {
+        fprintf(file, "  [%d] = %d (POISON)\n", i, viewer_(GetLocation()[i]));
+    }
+    fprintf(file, "}\n}\n");
+    fclose(file);
+}
+
+
+template <typename T, class Viewer, typename Poison, class Hash, size_t n>
+int UnkillableStack<T, Viewer, Poison, Hash, n>::Dump(size_t code, const char *file_name, size_t line, const char *function_name) {
     if (code == NO_ERRORS) return 1;
     std::string error;
     if (code == CANARY_IS_NOT_VALID) {
@@ -225,36 +330,11 @@ int UnkillableStack<T, P, H, n>::Dump(size_t code, const char *file_name, size_t
     if (code == POISONS_IS_NOT_VALID) {
         error = "POISONS_IS_NOT_VALID";
     }
-    if (code == THIS_IS_A_NULLPTR) {
-        error = "THIS_IS_A_NULLPTR";
-    }
+    if (code == POINTER_DESTRUCTED) {
+        error = "POINTER_DESTRUCTED";
+    } else{}
 
-    std::fstream out;
-    out.open("../dump", std::fstream::out);
-
-    out << "Error checking is FAILED!!!" << " From PATH:" << file_name << " (" << line << ") " << "in " <<
-    function_name << "()" << std::endl;
-
-    out << "UnkillableStack<T> " << name_ << " with T = " << Demangle(this) <<
-        " [" << this << "]" << std::endl;
-
-    out << "{" << std::endl;
-    out << "ERROR CODE = " << code << " (" << error << ")" << std::endl;
-    out << "BUFFER_SIZE = " << buffer_size_ << ", REALSIZE = " << real_size_ << std::endl;
-    out << "BUFFER [" << buffer_size_ << "] [" << buffer_ << "]" << std::endl;
-    out << "{" << std::endl;
-    out << "  [0]" << buffer_[0] << "  (POISON)" << std::endl;
-
-
-    for (size_t i = 1; i <= real_size_; ++i) {
-        out << "* [" << i << "] = " << buffer_[i] << std::endl;
-    }
-    for (size_t i = std::max(1, real_size_ + 1); i < buffer_size_; ++i) {
-        out << "  [" << i << "] = " << buffer_[i] << "  (POISON)" << std::endl;
-    }
-    out << "}" << std::endl;
-    out << "}" << std::endl;
-    out.close();
+    StaticOutput(code, file_name, line, function_name, error);
     return 0;
 
 }

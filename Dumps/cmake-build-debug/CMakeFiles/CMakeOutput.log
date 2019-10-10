@@ -631,3 +631,31 @@ make[1]: выход из каталога «/home/anatoly/projects/UnkillableSta
     Feature record: CXX_FEATURE:0cxx_variable_templates
     Feature record: CXX_FEATURE:0cxx_variadic_macros
     Feature record: CXX_FEATURE:0cxx_variadic_templates
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_249a4/fast"
+/usr/bin/make -f CMakeFiles/cmTC_249a4.dir/build.make CMakeFiles/cmTC_249a4.dir/build
+make[1]: вход в каталог «/home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_249a4.dir/CheckIncludeFile.c.o
+/usr/bin/gcc    -o CMakeFiles/cmTC_249a4.dir/CheckIncludeFile.c.o   -c /home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_249a4
+/home/anatoly/clion-2018.2.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_249a4.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_249a4.dir/CheckIncludeFile.c.o  -o cmTC_249a4 
+make[1]: выход из каталога «/home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp»
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_cd241/fast"
+/usr/bin/make -f CMakeFiles/cmTC_cd241.dir/build.make CMakeFiles/cmTC_cd241.dir/build
+make[1]: вход в каталог «/home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_cd241.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_cd241.dir/CheckFunctionExists.c.o   -c /home/anatoly/clion-2018.2.4/bin/cmake/linux/share/cmake-3.12/Modules/CheckFunctionExists.c
+Linking C executable cmTC_cd241
+/home/anatoly/clion-2018.2.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cd241.dir/link.txt --verbose=1
+/usr/bin/gcc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_cd241.dir/CheckFunctionExists.c.o  -o cmTC_cd241 -lpthread 
+make[1]: выход из каталога «/home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp»
+
+

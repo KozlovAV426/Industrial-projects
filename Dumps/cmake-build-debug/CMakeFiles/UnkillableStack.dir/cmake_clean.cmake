@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/UnkillableStack.dir/main.cpp.o"
-  "CMakeFiles/UnkillableStack.dir/Dump.cpp.o"
+  "CMakeFiles/UnkillableStack.dir/tests/testing.cpp.o"
   "UnkillableStack.pdb"
   "UnkillableStack"
 )

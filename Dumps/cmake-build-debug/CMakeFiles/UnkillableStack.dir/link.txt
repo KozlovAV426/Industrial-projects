@@ -1,1 +1,1 @@
-/usr/bin/g++  -g   CMakeFiles/UnkillableStack.dir/main.cpp.o CMakeFiles/UnkillableStack.dir/Dump.cpp.o  -o UnkillableStack 
+/usr/bin/g++  -g   CMakeFiles/UnkillableStack.dir/main.cpp.o CMakeFiles/UnkillableStack.dir/tests/testing.cpp.o  -o UnkillableStack lib/libgtestd.a lib/libgtest_maind.a lib/libgtestd.a -lpthread 

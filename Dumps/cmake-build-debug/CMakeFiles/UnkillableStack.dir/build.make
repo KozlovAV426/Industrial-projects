@@ -70,30 +70,33 @@ CMakeFiles/UnkillableStack.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/UnkillableStack.dir/main.cpp.s"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anatoly/projects/UnkillableStack/main.cpp -o CMakeFiles/UnkillableStack.dir/main.cpp.s
 
-CMakeFiles/UnkillableStack.dir/Dump.cpp.o: CMakeFiles/UnkillableStack.dir/flags.make
-CMakeFiles/UnkillableStack.dir/Dump.cpp.o: ../Dump.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/UnkillableStack.dir/Dump.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/UnkillableStack.dir/Dump.cpp.o -c /home/anatoly/projects/UnkillableStack/Dump.cpp
+CMakeFiles/UnkillableStack.dir/tests/testing.cpp.o: CMakeFiles/UnkillableStack.dir/flags.make
+CMakeFiles/UnkillableStack.dir/tests/testing.cpp.o: ../tests/testing.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/UnkillableStack.dir/tests/testing.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/UnkillableStack.dir/tests/testing.cpp.o -c /home/anatoly/projects/UnkillableStack/tests/testing.cpp
 
-CMakeFiles/UnkillableStack.dir/Dump.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/UnkillableStack.dir/Dump.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anatoly/projects/UnkillableStack/Dump.cpp > CMakeFiles/UnkillableStack.dir/Dump.cpp.i
+CMakeFiles/UnkillableStack.dir/tests/testing.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/UnkillableStack.dir/tests/testing.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anatoly/projects/UnkillableStack/tests/testing.cpp > CMakeFiles/UnkillableStack.dir/tests/testing.cpp.i
 
-CMakeFiles/UnkillableStack.dir/Dump.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/UnkillableStack.dir/Dump.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anatoly/projects/UnkillableStack/Dump.cpp -o CMakeFiles/UnkillableStack.dir/Dump.cpp.s
+CMakeFiles/UnkillableStack.dir/tests/testing.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/UnkillableStack.dir/tests/testing.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anatoly/projects/UnkillableStack/tests/testing.cpp -o CMakeFiles/UnkillableStack.dir/tests/testing.cpp.s
 
 # Object files for target UnkillableStack
 UnkillableStack_OBJECTS = \
 "CMakeFiles/UnkillableStack.dir/main.cpp.o" \
-"CMakeFiles/UnkillableStack.dir/Dump.cpp.o"
+"CMakeFiles/UnkillableStack.dir/tests/testing.cpp.o"
 
 # External object files for target UnkillableStack
 UnkillableStack_EXTERNAL_OBJECTS =
 
 UnkillableStack: CMakeFiles/UnkillableStack.dir/main.cpp.o
-UnkillableStack: CMakeFiles/UnkillableStack.dir/Dump.cpp.o
+UnkillableStack: CMakeFiles/UnkillableStack.dir/tests/testing.cpp.o
 UnkillableStack: CMakeFiles/UnkillableStack.dir/build.make
+UnkillableStack: lib/libgtestd.a
+UnkillableStack: lib/libgtest_maind.a
+UnkillableStack: lib/libgtestd.a
 UnkillableStack: CMakeFiles/UnkillableStack.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable UnkillableStack"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/UnkillableStack.dir/link.txt --verbose=$(VERBOSE)

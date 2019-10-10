@@ -6,7 +6,7 @@ file.close()
 
 one_word = ''
 for l in text:
-    one_word += l;
+    one_word += l
 one_word = list(one_word.split('\n'))
 one_word = '#'.join(one_word)
 one_word = one_word.split('#')
@@ -45,4 +45,3 @@ for w in words_with_undef:
 for w in text:
     file.write(w)
 file.close() 
-

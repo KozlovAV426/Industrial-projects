@@ -7,30 +7,51 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
+  "/home/anatoly/clion-2018.2.4/bin/cmake/linux/share/cmake-3.12/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in"
   "/home/anatoly/clion-2018.2.4/bin/cmake/linux/share/cmake-3.12/Modules/CMakeCInformation.cmake"
   "/home/anatoly/clion-2018.2.4/bin/cmake/linux/share/cmake-3.12/Modules/CMakeCXXInformation.cmake"
   "/home/anatoly/clion-2018.2.4/bin/cmake/linux/share/cmake-3.12/Modules/CMakeCommonLanguageInclude.cmake"
+  "/home/anatoly/clion-2018.2.4/bin/cmake/linux/share/cmake-3.12/Modules/CMakeDependentOption.cmake"
   "/home/anatoly/clion-2018.2.4/bin/cmake/linux/share/cmake-3.12/Modules/CMakeExtraGeneratorDetermineCompilerMacrosAndIncludeDirs.cmake"
   "/home/anatoly/clion-2018.2.4/bin/cmake/linux/share/cmake-3.12/Modules/CMakeFindCodeBlocks.cmake"
   "/home/anatoly/clion-2018.2.4/bin/cmake/linux/share/cmake-3.12/Modules/CMakeGenericSystem.cmake"
   "/home/anatoly/clion-2018.2.4/bin/cmake/linux/share/cmake-3.12/Modules/CMakeInitializeConfigs.cmake"
   "/home/anatoly/clion-2018.2.4/bin/cmake/linux/share/cmake-3.12/Modules/CMakeLanguageInformation.cmake"
+  "/home/anatoly/clion-2018.2.4/bin/cmake/linux/share/cmake-3.12/Modules/CMakePackageConfigHelpers.cmake"
   "/home/anatoly/clion-2018.2.4/bin/cmake/linux/share/cmake-3.12/Modules/CMakeSystemSpecificInformation.cmake"
   "/home/anatoly/clion-2018.2.4/bin/cmake/linux/share/cmake-3.12/Modules/CMakeSystemSpecificInitialize.cmake"
+  "/home/anatoly/clion-2018.2.4/bin/cmake/linux/share/cmake-3.12/Modules/CheckIncludeFile.cmake"
+  "/home/anatoly/clion-2018.2.4/bin/cmake/linux/share/cmake-3.12/Modules/CheckLibraryExists.cmake"
+  "/home/anatoly/clion-2018.2.4/bin/cmake/linux/share/cmake-3.12/Modules/CheckSymbolExists.cmake"
   "/home/anatoly/clion-2018.2.4/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
   "/home/anatoly/clion-2018.2.4/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/GNU-C.cmake"
   "/home/anatoly/clion-2018.2.4/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/GNU-CXX.cmake"
   "/home/anatoly/clion-2018.2.4/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/GNU.cmake"
+  "/home/anatoly/clion-2018.2.4/bin/cmake/linux/share/cmake-3.12/Modules/FindPackageHandleStandardArgs.cmake"
+  "/home/anatoly/clion-2018.2.4/bin/cmake/linux/share/cmake-3.12/Modules/FindPackageMessage.cmake"
+  "/home/anatoly/clion-2018.2.4/bin/cmake/linux/share/cmake-3.12/Modules/FindPythonInterp.cmake"
+  "/home/anatoly/clion-2018.2.4/bin/cmake/linux/share/cmake-3.12/Modules/FindThreads.cmake"
+  "/home/anatoly/clion-2018.2.4/bin/cmake/linux/share/cmake-3.12/Modules/GNUInstallDirs.cmake"
   "/home/anatoly/clion-2018.2.4/bin/cmake/linux/share/cmake-3.12/Modules/Platform/Linux-GNU-C.cmake"
   "/home/anatoly/clion-2018.2.4/bin/cmake/linux/share/cmake-3.12/Modules/Platform/Linux-GNU-CXX.cmake"
   "/home/anatoly/clion-2018.2.4/bin/cmake/linux/share/cmake-3.12/Modules/Platform/Linux-GNU.cmake"
   "/home/anatoly/clion-2018.2.4/bin/cmake/linux/share/cmake-3.12/Modules/Platform/Linux.cmake"
   "/home/anatoly/clion-2018.2.4/bin/cmake/linux/share/cmake-3.12/Modules/Platform/UnixPaths.cmake"
   "/home/anatoly/clion-2018.2.4/bin/cmake/linux/share/cmake-3.12/Modules/ProcessorCount.cmake"
+  "/home/anatoly/clion-2018.2.4/bin/cmake/linux/share/cmake-3.12/Modules/WriteBasicConfigVersionFile.cmake"
   "../CMakeLists.txt"
   "CMakeFiles/3.12.2/CMakeCCompiler.cmake"
   "CMakeFiles/3.12.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.12.2/CMakeSystem.cmake"
+  "../tests/googletest/CMakeLists.txt"
+  "../tests/googletest/googlemock/CMakeLists.txt"
+  "../tests/googletest/googlemock/cmake/gmock.pc.in"
+  "../tests/googletest/googlemock/cmake/gmock_main.pc.in"
+  "../tests/googletest/googletest/CMakeLists.txt"
+  "../tests/googletest/googletest/cmake/Config.cmake.in"
+  "../tests/googletest/googletest/cmake/gtest.pc.in"
+  "../tests/googletest/googletest/cmake/gtest_main.pc.in"
+  "../tests/googletest/googletest/cmake/internal_utils.cmake"
   )
 
 # The corresponding makefile is:
@@ -42,9 +63,16 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "tests/googletest/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "tests/googletest/googlemock/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "tests/googletest/googletest/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/UnkillableStack.dir/DependInfo.cmake"
+  "tests/googletest/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake"
+  "tests/googletest/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake"
+  "tests/googletest/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
+  "tests/googletest/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
   )
