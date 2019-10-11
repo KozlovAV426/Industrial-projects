@@ -59,10 +59,10 @@ RM = /home/anatoly/clion-2018.2.4/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/anatoly/projects/UnkillableStack
+CMAKE_SOURCE_DIR = /home/anatoly/Industrial-projects/Dumps
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/anatoly/projects/UnkillableStack/cmake-build-debug
+CMAKE_BINARY_DIR = /home/anatoly/Industrial-projects/Dumps/cmake-build-debug
 
 #=============================================================================
 # Target rules for target CMakeFiles/UnkillableStack.dir
@@ -72,7 +72,7 @@ CMakeFiles/UnkillableStack.dir/all: tests/googletest/googletest/CMakeFiles/gtest
 CMakeFiles/UnkillableStack.dir/all: tests/googletest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f CMakeFiles/UnkillableStack.dir/build.make CMakeFiles/UnkillableStack.dir/depend
 	$(MAKE) -f CMakeFiles/UnkillableStack.dir/build.make CMakeFiles/UnkillableStack.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target UnkillableStack"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target UnkillableStack"
 .PHONY : CMakeFiles/UnkillableStack.dir/all
 
 # Include target in all.
@@ -82,9 +82,9 @@ all: CMakeFiles/UnkillableStack.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/UnkillableStack.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/UnkillableStack.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/UnkillableStack.dir/rule
 
 # Convenience name for target.
@@ -150,7 +150,7 @@ tests/googletest/googlemock/CMakeFiles/gmock_main.dir/all: tests/googletest/goog
 tests/googletest/googlemock/CMakeFiles/gmock_main.dir/all: tests/googletest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f tests/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make tests/googletest/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) -f tests/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make tests/googletest/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles --progress-num=6,7 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles --progress-num=6,7 "Built target gmock_main"
 .PHONY : tests/googletest/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Include target in all.
@@ -160,9 +160,9 @@ all: tests/googletest/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
 tests/googletest/googlemock/CMakeFiles/gmock_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 tests/googletest/googlemock/CMakeFiles/gmock_main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles 0
 .PHONY : tests/googletest/googlemock/CMakeFiles/gmock_main.dir/rule
 
 # Convenience name for target.
@@ -187,7 +187,7 @@ clean: tests/googletest/googlemock/CMakeFiles/gmock_main.dir/clean
 tests/googletest/googlemock/CMakeFiles/gmock.dir/all: tests/googletest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f tests/googletest/googlemock/CMakeFiles/gmock.dir/build.make tests/googletest/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) -f tests/googletest/googlemock/CMakeFiles/gmock.dir/build.make tests/googletest/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles --progress-num=4,5 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles --progress-num=4,5 "Built target gmock"
 .PHONY : tests/googletest/googlemock/CMakeFiles/gmock.dir/all
 
 # Include target in all.
@@ -197,9 +197,9 @@ all: tests/googletest/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
 tests/googletest/googlemock/CMakeFiles/gmock.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 tests/googletest/googlemock/CMakeFiles/gmock.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles 0
 .PHONY : tests/googletest/googlemock/CMakeFiles/gmock.dir/rule
 
 # Convenience name for target.
@@ -244,7 +244,7 @@ tests/googletest/googletest/preinstall:
 tests/googletest/googletest/CMakeFiles/gtest_main.dir/all: tests/googletest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f tests/googletest/googletest/CMakeFiles/gtest_main.dir/build.make tests/googletest/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f tests/googletest/googletest/CMakeFiles/gtest_main.dir/build.make tests/googletest/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles --progress-num=10,11 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles --progress-num=10,11 "Built target gtest_main"
 .PHONY : tests/googletest/googletest/CMakeFiles/gtest_main.dir/all
 
 # Include target in all.
@@ -254,9 +254,9 @@ all: tests/googletest/googletest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
 tests/googletest/googletest/CMakeFiles/gtest_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 tests/googletest/googletest/CMakeFiles/gtest_main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles 0
 .PHONY : tests/googletest/googletest/CMakeFiles/gtest_main.dir/rule
 
 # Convenience name for target.
@@ -281,7 +281,7 @@ clean: tests/googletest/googletest/CMakeFiles/gtest_main.dir/clean
 tests/googletest/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f tests/googletest/googletest/CMakeFiles/gtest.dir/build.make tests/googletest/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f tests/googletest/googletest/CMakeFiles/gtest.dir/build.make tests/googletest/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles --progress-num=8,9 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles --progress-num=8,9 "Built target gtest"
 .PHONY : tests/googletest/googletest/CMakeFiles/gtest.dir/all
 
 # Include target in all.
@@ -291,9 +291,9 @@ all: tests/googletest/googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
 tests/googletest/googletest/CMakeFiles/gtest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 tests/googletest/googletest/CMakeFiles/gtest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles 0
 .PHONY : tests/googletest/googletest/CMakeFiles/gtest.dir/rule
 
 # Convenience name for target.

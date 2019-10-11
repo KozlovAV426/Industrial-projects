@@ -300,7 +300,7 @@ cxxabi.h
 acxx_demangle.h
 -
 
-/home/anatoly/projects/UnkillableStack/Stack.h
+/home/anatoly/Industrial-projects/Dumps/Stack.h
 cstddef
 -
 utility
@@ -322,15 +322,9 @@ type_traits
 cxxabi.h
 -
 
-/home/anatoly/projects/UnkillableStack/main.cpp
+/home/anatoly/Industrial-projects/Dumps/main.cpp
 Stack.h
-/home/anatoly/projects/UnkillableStack/Stack.h
+/home/anatoly/Industrial-projects/Dumps/Stack.h
 gtest/gtest.h
-/home/anatoly/projects/UnkillableStack/gtest/gtest.h
-
-/home/anatoly/projects/UnkillableStack/tests/testing.cpp
-../Stack.h
-/home/anatoly/projects/UnkillableStack/Stack.h
-gtest/gtest.h
-/home/anatoly/projects/UnkillableStack/tests/gtest/gtest.h
+/home/anatoly/Industrial-projects/Dumps/gtest/gtest.h
 

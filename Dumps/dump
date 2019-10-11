@@ -1,1 +1,2 @@
-Error checking is FAILED!!! From PATH: /home/anatoly/projects/UnkillableStack/Stack.h (133) in ~UnkillableStack() 
+Error checking is FAILED!!! From PATH: /home/anatoly/Industrial-projects/Dumps/Stack.h (160) in Push() 
+HASHES_DO_NOT_MATCH

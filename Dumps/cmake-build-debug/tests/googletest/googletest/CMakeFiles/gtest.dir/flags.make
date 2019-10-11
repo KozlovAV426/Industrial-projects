@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -Wall -Wshadow -Werror -Wno-error=dangling-else -DGTEST_HAS_PTH
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/anatoly/projects/UnkillableStack/tests/googletest/googletest/include -I/home/anatoly/projects/UnkillableStack/tests/googletest/googletest 
+CXX_INCLUDES = -I/home/anatoly/Industrial-projects/Dumps/tests/googletest/googletest/include -I/home/anatoly/Industrial-projects/Dumps/tests/googletest/googletest 
 

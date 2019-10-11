@@ -38,7 +38,7 @@ enum ERRORS {
 template <typename T>
 class DefaultPoison {
 public:
-    const int static POISON = (T)(0xCACED426);
+    const int static POISON = T();
 };
 
 class IntViewer {
@@ -66,7 +66,7 @@ private:
 
     T* buffer_;
 
-    size_t* checksum_;
+    size_t checksum_;
     std::string name_;
 
     int canary_in_end = Poison::POISON;
@@ -88,6 +88,8 @@ private:
 
 public:
     UnkillableStack(std::string name);
+
+    UnkillableStack& operator= (const UnkillableStack& oth) = delete;
 
     ~UnkillableStack();
 
@@ -115,7 +117,7 @@ UnkillableStack <T, Viewer, Poison, Hash, n>::UnkillableStack(std::string name)
         , buffer_size_(n + 2)
         , top_(1)
         , real_size_(0)
-        , checksum_(new size_t(0))
+        , checksum_(0)
         , name_(name)
 
 {
@@ -124,7 +126,7 @@ UnkillableStack <T, Viewer, Poison, Hash, n>::UnkillableStack(std::string name)
                 buffer_[i] = Poison::POISON;
             }
             buffer_ = (T*)((size_t*)(buffer_) - SHIFT);
-            *checksum_ = GetHash();
+            checksum_ = GetHash();
 
 }
 
@@ -165,7 +167,7 @@ void UnkillableStack<T, Viewer, Poison, Hash, n>::Push(const T &elem) {
 
     real_size_ += 1;
     top_ += 1;
-    *checksum_ = GetHash();
+    checksum_ = GetHash();
 
     VERIFED(GetErrorNumber());
 }
@@ -184,7 +186,7 @@ void UnkillableStack<T, Viewer, Poison, Hash, n>::EmplaceBack(Args&&... args) {
 
     real_size_ += 1;
     top_ += 1;
-    *checksum_ = GetHash();
+    checksum_ = GetHash();
 
     VERIFED(GetErrorNumber());
 }
@@ -199,7 +201,7 @@ void UnkillableStack<T, Viewer, Poison, Hash, n>::Pop() {
     (GetLocation() + top_)->~T();
     GetLocation()[top_] = Poison::POISON;
 
-    *checksum_ = GetHash();
+    checksum_ = GetHash();
     VERIFED(GetErrorNumber());
 }
 
@@ -210,13 +212,16 @@ T* UnkillableStack<T, Viewer, Poison, Hash, n>::GetLocation() {
 
 template <typename T, class Viewer, typename Poison, class Hash, size_t n>
 size_t UnkillableStack<T, Viewer, Poison, Hash, n> ::GetHash() {
+    size_t old_checksum = checksum_;
     size_t res_hash = 0;
+    checksum_ = 0;
     res_hash = std::hash<std::string>()(std::string(reinterpret_cast<const char*>(this),
             sizeof(UnkillableStack<T, Viewer, Poison, Hash, n>)));
 
 
     res_hash += std::hash<std::string>()(std::string(reinterpret_cast<const char*>(GetLocation()),
                                                     real_size_));
+    checksum_ = old_checksum;
     return res_hash;
 }
 
@@ -230,11 +235,13 @@ bool UnkillableStack<T, Viewer, Poison, Hash, n>::IsCanaryValid() {
 
 template <typename T, class Viewer, typename Poison, class Hash, size_t n>
 bool UnkillableStack<T, Viewer, Poison, Hash, n>::IsHashValid() {
-    return *checksum_ == GetHash();
+    size_t hash = GetHash();
+    return (hash == checksum_);
 }
 
 template <typename T, class Viewer, typename Poison, class Hash, size_t n>
 bool UnkillableStack<T, Viewer, Poison, Hash, n>::IsOtherCellsValid() {
+    if (!IsHashValid()) return false;
     for (size_t i = top_; i < buffer_size_ - 1; ++i) {
         if (GetLocation()[i] != Poison::POISON) return false;
     }
@@ -243,14 +250,14 @@ bool UnkillableStack<T, Viewer, Poison, Hash, n>::IsOtherCellsValid() {
 
 template <typename T, class Viewer, typename Poison, class Hash, size_t n>
 size_t UnkillableStack<T, Viewer, Poison, Hash, n>::GetErrorNumber() {
+    if (!IsHashValid()) {
+        return ERRORS::HASHES_DO_NOT_MATCH;
+    }
     if (this == nullptr || buffer_ == nullptr) {
         return POINTER_DESTRUCTED;
     }
     if (!IsCanaryValid()) {
         return ERRORS::CANARY_IS_NOT_VALID;
-    }
-    if (!IsHashValid()) {
-        return ERRORS::HASHES_DO_NOT_MATCH;
     }
     if (!IsOtherCellsValid()) {
         return ERRORS::POISONS_IS_NOT_VALID;
@@ -297,22 +304,35 @@ void UnkillableStack<T, Viewer, Poison, Hash, n>::StaticOutput(size_t code, cons
                                                        const char *function_name, std::string error) {
     FILE* file = fopen("../dump", "w");
     fprintf(file, "Error checking is FAILED!!! From PATH: %s (%d) in %s() \n", file_name, line, function_name);
+    std::fflush(file);
     if (error == "POINTER_DESTRUCTED") {
+        fprintf(file, "POINTER_DESTRUCTED");
         fclose(file);
         return;
     }
+    if (error == "HASHES_DO_NOT_MATCH") {
+        fprintf(file, "HASHES_DO_NOT_MATCH");
+        fclose(file);
+        return;
+
+    }
     fprintf(file, "UnkillableStack<T> %s with T = %s [%x] \n", name_.c_str(), Demangle(this).c_str(), this);
+    std::fflush(file);
     fprintf(file, "{\nERROR CODE = %d (%s)\nBUFFER_SIZE = %d REALSIZE = %d\nBUFFER[%d][%x]\n{\n", code, error.c_str(),
             buffer_size_, real_size_, buffer_size_, GetLocation());
+    std::fflush(file);
     fprintf(file, "  [0] = %d (POISON)\n", GetLocation()[0]);
-
+    std::fflush(file);
     for (size_t i = 1; i <= real_size_; ++i) {
         fprintf(file, "* [%d] = %s\n", i, viewer_(GetLocation()[i]));
+        std::fflush(file);
     }
     for (size_t i = std::max(1, real_size_ + 1); i < buffer_size_; ++i) {
         fprintf(file, "  [%d] = %d (POISON)\n", i, viewer_(GetLocation()[i]));
+        std::fflush(file);
     }
     fprintf(file, "}\n}\n");
+    std::fflush(file);
     fclose(file);
 }
 

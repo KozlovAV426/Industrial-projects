@@ -43,10 +43,10 @@ RM = /home/anatoly/clion-2018.2.4/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/anatoly/projects/UnkillableStack
+CMAKE_SOURCE_DIR = /home/anatoly/Industrial-projects/Dumps
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/anatoly/projects/UnkillableStack/cmake-build-debug
+CMAKE_BINARY_DIR = /home/anatoly/Industrial-projects/Dumps/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include tests/googletest/googlemock/CMakeFiles/gmock_main.dir/depend.make
@@ -59,16 +59,16 @@ include tests/googletest/googlemock/CMakeFiles/gmock_main.dir/flags.make
 
 tests/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o: tests/googletest/googlemock/CMakeFiles/gmock_main.dir/flags.make
 tests/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o: ../tests/googletest/googlemock/src/gmock_main.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tests/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o"
-	cd /home/anatoly/projects/UnkillableStack/cmake-build-debug/tests/googletest/googlemock && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /home/anatoly/projects/UnkillableStack/tests/googletest/googlemock/src/gmock_main.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tests/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o"
+	cd /home/anatoly/Industrial-projects/Dumps/cmake-build-debug/tests/googletest/googlemock && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /home/anatoly/Industrial-projects/Dumps/tests/googletest/googlemock/src/gmock_main.cc
 
 tests/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gmock_main.dir/src/gmock_main.cc.i"
-	cd /home/anatoly/projects/UnkillableStack/cmake-build-debug/tests/googletest/googlemock && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anatoly/projects/UnkillableStack/tests/googletest/googlemock/src/gmock_main.cc > CMakeFiles/gmock_main.dir/src/gmock_main.cc.i
+	cd /home/anatoly/Industrial-projects/Dumps/cmake-build-debug/tests/googletest/googlemock && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anatoly/Industrial-projects/Dumps/tests/googletest/googlemock/src/gmock_main.cc > CMakeFiles/gmock_main.dir/src/gmock_main.cc.i
 
 tests/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gmock_main.dir/src/gmock_main.cc.s"
-	cd /home/anatoly/projects/UnkillableStack/cmake-build-debug/tests/googletest/googlemock && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anatoly/projects/UnkillableStack/tests/googletest/googlemock/src/gmock_main.cc -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.s
+	cd /home/anatoly/Industrial-projects/Dumps/cmake-build-debug/tests/googletest/googlemock && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anatoly/Industrial-projects/Dumps/tests/googletest/googlemock/src/gmock_main.cc -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.s
 
 # Object files for target gmock_main
 gmock_main_OBJECTS = \
@@ -80,9 +80,9 @@ gmock_main_EXTERNAL_OBJECTS =
 lib/libgmock_maind.a: tests/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o
 lib/libgmock_maind.a: tests/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make
 lib/libgmock_maind.a: tests/googletest/googlemock/CMakeFiles/gmock_main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library ../../../lib/libgmock_maind.a"
-	cd /home/anatoly/projects/UnkillableStack/cmake-build-debug/tests/googletest/googlemock && $(CMAKE_COMMAND) -P CMakeFiles/gmock_main.dir/cmake_clean_target.cmake
-	cd /home/anatoly/projects/UnkillableStack/cmake-build-debug/tests/googletest/googlemock && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gmock_main.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library ../../../lib/libgmock_maind.a"
+	cd /home/anatoly/Industrial-projects/Dumps/cmake-build-debug/tests/googletest/googlemock && $(CMAKE_COMMAND) -P CMakeFiles/gmock_main.dir/cmake_clean_target.cmake
+	cd /home/anatoly/Industrial-projects/Dumps/cmake-build-debug/tests/googletest/googlemock && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gmock_main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 tests/googletest/googlemock/CMakeFiles/gmock_main.dir/build: lib/libgmock_maind.a
@@ -90,10 +90,10 @@ tests/googletest/googlemock/CMakeFiles/gmock_main.dir/build: lib/libgmock_maind.
 .PHONY : tests/googletest/googlemock/CMakeFiles/gmock_main.dir/build
 
 tests/googletest/googlemock/CMakeFiles/gmock_main.dir/clean:
-	cd /home/anatoly/projects/UnkillableStack/cmake-build-debug/tests/googletest/googlemock && $(CMAKE_COMMAND) -P CMakeFiles/gmock_main.dir/cmake_clean.cmake
+	cd /home/anatoly/Industrial-projects/Dumps/cmake-build-debug/tests/googletest/googlemock && $(CMAKE_COMMAND) -P CMakeFiles/gmock_main.dir/cmake_clean.cmake
 .PHONY : tests/googletest/googlemock/CMakeFiles/gmock_main.dir/clean
 
 tests/googletest/googlemock/CMakeFiles/gmock_main.dir/depend:
-	cd /home/anatoly/projects/UnkillableStack/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/anatoly/projects/UnkillableStack /home/anatoly/projects/UnkillableStack/tests/googletest/googlemock /home/anatoly/projects/UnkillableStack/cmake-build-debug /home/anatoly/projects/UnkillableStack/cmake-build-debug/tests/googletest/googlemock /home/anatoly/projects/UnkillableStack/cmake-build-debug/tests/googletest/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/anatoly/Industrial-projects/Dumps/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/anatoly/Industrial-projects/Dumps /home/anatoly/Industrial-projects/Dumps/tests/googletest/googlemock /home/anatoly/Industrial-projects/Dumps/cmake-build-debug /home/anatoly/Industrial-projects/Dumps/cmake-build-debug/tests/googletest/googlemock /home/anatoly/Industrial-projects/Dumps/cmake-build-debug/tests/googletest/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : tests/googletest/googlemock/CMakeFiles/gmock_main.dir/depend
 

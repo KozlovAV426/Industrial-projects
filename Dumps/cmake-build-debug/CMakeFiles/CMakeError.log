@@ -1,24 +1,24 @@
 Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_00daa/fast"
-/usr/bin/make -f CMakeFiles/cmTC_00daa.dir/build.make CMakeFiles/cmTC_00daa.dir/build
-make[1]: вход в каталог «/home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp»
-Building C object CMakeFiles/cmTC_00daa.dir/CheckSymbolExists.c.o
-/usr/bin/gcc    -o CMakeFiles/cmTC_00daa.dir/CheckSymbolExists.c.o   -c /home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_00daa
-/home/anatoly/clion-2018.2.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_00daa.dir/link.txt --verbose=1
-/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_00daa.dir/CheckSymbolExists.c.o  -o cmTC_00daa 
-CMakeFiles/cmTC_00daa.dir/CheckSymbolExists.c.o: In function `main':
+Run Build Command:"/usr/bin/make" "cmTC_7b620/fast"
+/usr/bin/make -f CMakeFiles/cmTC_7b620.dir/build.make CMakeFiles/cmTC_7b620.dir/build
+make[1]: вход в каталог «/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_7b620.dir/CheckSymbolExists.c.o
+/usr/bin/gcc    -o CMakeFiles/cmTC_7b620.dir/CheckSymbolExists.c.o   -c /home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_7b620
+/home/anatoly/clion-2018.2.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7b620.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_7b620.dir/CheckSymbolExists.c.o  -o cmTC_7b620 
+CMakeFiles/cmTC_7b620.dir/CheckSymbolExists.c.o: In function `main':
 CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_00daa.dir/build.make:86: recipe for target 'cmTC_00daa' failed
-make[1]: *** [cmTC_00daa] Error 1
-make[1]: выход из каталога «/home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp»
-Makefile:121: recipe for target 'cmTC_00daa/fast' failed
-make: *** [cmTC_00daa/fast] Error 2
+CMakeFiles/cmTC_7b620.dir/build.make:86: recipe for target 'cmTC_7b620' failed
+make[1]: *** [cmTC_7b620] Error 1
+make[1]: выход из каталога «/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp»
+Makefile:121: recipe for target 'cmTC_7b620/fast' failed
+make: *** [cmTC_7b620/fast] Error 2
 
-File /home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+File /home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
 #include <pthread.h>
 
@@ -34,22 +34,22 @@ int main(int argc, char** argv)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_e6429/fast"
-/usr/bin/make -f CMakeFiles/cmTC_e6429.dir/build.make CMakeFiles/cmTC_e6429.dir/build
-make[1]: вход в каталог «/home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp»
-Building C object CMakeFiles/cmTC_e6429.dir/CheckFunctionExists.c.o
-/usr/bin/gcc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_e6429.dir/CheckFunctionExists.c.o   -c /home/anatoly/clion-2018.2.4/bin/cmake/linux/share/cmake-3.12/Modules/CheckFunctionExists.c
-Linking C executable cmTC_e6429
-/home/anatoly/clion-2018.2.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e6429.dir/link.txt --verbose=1
-/usr/bin/gcc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_e6429.dir/CheckFunctionExists.c.o  -o cmTC_e6429 -lpthreads 
+Run Build Command:"/usr/bin/make" "cmTC_c7360/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c7360.dir/build.make CMakeFiles/cmTC_c7360.dir/build
+make[1]: вход в каталог «/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_c7360.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_c7360.dir/CheckFunctionExists.c.o   -c /home/anatoly/clion-2018.2.4/bin/cmake/linux/share/cmake-3.12/Modules/CheckFunctionExists.c
+Linking C executable cmTC_c7360
+/home/anatoly/clion-2018.2.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c7360.dir/link.txt --verbose=1
+/usr/bin/gcc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_c7360.dir/CheckFunctionExists.c.o  -o cmTC_c7360 -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_e6429.dir/build.make:86: recipe for target 'cmTC_e6429' failed
-make[1]: *** [cmTC_e6429] Error 1
-make[1]: выход из каталога «/home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp»
-Makefile:121: recipe for target 'cmTC_e6429/fast' failed
-make: *** [cmTC_e6429/fast] Error 2
+CMakeFiles/cmTC_c7360.dir/build.make:86: recipe for target 'cmTC_c7360' failed
+make[1]: *** [cmTC_c7360] Error 1
+make[1]: выход из каталога «/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp»
+Makefile:121: recipe for target 'cmTC_c7360/fast' failed
+make: *** [cmTC_c7360/fast] Error 2
 
 

@@ -22,8 +22,8 @@ CMakeFiles/UnkillableStack.dir/main.cpp.o
  ../tests/googletest/googletest/include/gtest/internal/gtest-port.h
  ../tests/googletest/googletest/include/gtest/internal/gtest-string.h
  ../tests/googletest/googletest/include/gtest/internal/gtest-type-util.h
- /home/anatoly/projects/UnkillableStack/Stack.h
- /home/anatoly/projects/UnkillableStack/main.cpp
+ /home/anatoly/Industrial-projects/Dumps/Stack.h
+ /home/anatoly/Industrial-projects/Dumps/main.cpp
 CMakeFiles/UnkillableStack.dir/tests/testing.cpp.o
  ../tests/googletest/googletest/include/gtest/gtest-death-test.h
  ../tests/googletest/googletest/include/gtest/gtest-matchers.h
@@ -45,5 +45,5 @@ CMakeFiles/UnkillableStack.dir/tests/testing.cpp.o
  ../tests/googletest/googletest/include/gtest/internal/gtest-port.h
  ../tests/googletest/googletest/include/gtest/internal/gtest-string.h
  ../tests/googletest/googletest/include/gtest/internal/gtest-type-util.h
- /home/anatoly/projects/UnkillableStack/Stack.h
- /home/anatoly/projects/UnkillableStack/tests/testing.cpp
+ /home/anatoly/Industrial-projects/Dumps/Stack.h
+ /home/anatoly/Industrial-projects/Dumps/tests/testing.cpp

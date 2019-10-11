@@ -1,4 +1,4 @@
-The system is: Linux - 4.15.0-64-generic - x86_64
+The system is: Linux - 4.15.0-65-generic - x86_64
 Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
 Compiler: /usr/bin/gcc 
 Build flags: 
@@ -10,7 +10,7 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
 
-The C compiler identification is GNU, found in "/home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/3.12.2/CompilerIdC/a.out"
+The C compiler identification is GNU, found in "/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/3.12.2/CompilerIdC/a.out"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: /usr/bin/g++ 
@@ -23,33 +23,33 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
 
-The CXX compiler identification is GNU, found in "/home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/3.12.2/CompilerIdCXX/a.out"
+The CXX compiler identification is GNU, found in "/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/3.12.2/CompilerIdCXX/a.out"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: /home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_de410/fast"
-/usr/bin/make -f CMakeFiles/cmTC_de410.dir/build.make CMakeFiles/cmTC_de410.dir/build
-make[1]: вход в каталог «/home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp»
-Building C object CMakeFiles/cmTC_de410.dir/testCCompiler.c.o
-/usr/bin/gcc    -o CMakeFiles/cmTC_de410.dir/testCCompiler.c.o   -c /home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_de410
-/home/anatoly/clion-2018.2.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_de410.dir/link.txt --verbose=1
-/usr/bin/gcc      CMakeFiles/cmTC_de410.dir/testCCompiler.c.o  -o cmTC_de410 
-make[1]: выход из каталога «/home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp»
+Run Build Command:"/usr/bin/make" "cmTC_89d07/fast"
+/usr/bin/make -f CMakeFiles/cmTC_89d07.dir/build.make CMakeFiles/cmTC_89d07.dir/build
+make[1]: вход в каталог «/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_89d07.dir/testCCompiler.c.o
+/usr/bin/gcc    -o CMakeFiles/cmTC_89d07.dir/testCCompiler.c.o   -c /home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_89d07
+/home/anatoly/clion-2018.2.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_89d07.dir/link.txt --verbose=1
+/usr/bin/gcc      CMakeFiles/cmTC_89d07.dir/testCCompiler.c.o  -o cmTC_89d07 
+make[1]: выход из каталога «/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp»
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_e2bf9/fast"
-/usr/bin/make -f CMakeFiles/cmTC_e2bf9.dir/build.make CMakeFiles/cmTC_e2bf9.dir/build
-make[1]: вход в каталог «/home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp»
-Building C object CMakeFiles/cmTC_e2bf9.dir/CMakeCCompilerABI.c.o
-/usr/bin/gcc    -o CMakeFiles/cmTC_e2bf9.dir/CMakeCCompilerABI.c.o   -c /home/anatoly/clion-2018.2.4/bin/cmake/linux/share/cmake-3.12/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_e2bf9
-/home/anatoly/clion-2018.2.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e2bf9.dir/link.txt --verbose=1
-/usr/bin/gcc     -v CMakeFiles/cmTC_e2bf9.dir/CMakeCCompilerABI.c.o  -o cmTC_e2bf9 
+Run Build Command:"/usr/bin/make" "cmTC_742d9/fast"
+/usr/bin/make -f CMakeFiles/cmTC_742d9.dir/build.make CMakeFiles/cmTC_742d9.dir/build
+make[1]: вход в каталог «/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_742d9.dir/CMakeCCompilerABI.c.o
+/usr/bin/gcc    -o CMakeFiles/cmTC_742d9.dir/CMakeCCompilerABI.c.o   -c /home/anatoly/clion-2018.2.4/bin/cmake/linux/share/cmake-3.12/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_742d9
+/home/anatoly/clion-2018.2.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_742d9.dir/link.txt --verbose=1
+/usr/bin/gcc     -v CMakeFiles/cmTC_742d9.dir/CMakeCCompilerABI.c.o  -o cmTC_742d9 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/gcc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
@@ -61,24 +61,24 @@ Thread model: posix
 gcc version 7.4.0 (Ubuntu 7.4.0-1ubuntu1~18.04.1) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e2bf9' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccOsUTSq.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_e2bf9 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_e2bf9.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e2bf9' '-mtune=generic' '-march=x86-64'
-make[1]: выход из каталога «/home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp»
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_742d9' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cctGsibo.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_742d9 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_742d9.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_742d9' '-mtune=generic' '-march=x86-64'
+make[1]: выход из каталога «/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp»
 
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_e2bf9/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_e2bf9.dir/build.make CMakeFiles/cmTC_e2bf9.dir/build]
-  ignore line: [make[1]: вход в каталог «/home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp»]
-  ignore line: [Building C object CMakeFiles/cmTC_e2bf9.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/gcc    -o CMakeFiles/cmTC_e2bf9.dir/CMakeCCompilerABI.c.o   -c /home/anatoly/clion-2018.2.4/bin/cmake/linux/share/cmake-3.12/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_e2bf9]
-  ignore line: [/home/anatoly/clion-2018.2.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e2bf9.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/gcc     -v CMakeFiles/cmTC_e2bf9.dir/CMakeCCompilerABI.c.o  -o cmTC_e2bf9 ]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_742d9/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_742d9.dir/build.make CMakeFiles/cmTC_742d9.dir/build]
+  ignore line: [make[1]: вход в каталог «/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp»]
+  ignore line: [Building C object CMakeFiles/cmTC_742d9.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/gcc    -o CMakeFiles/cmTC_742d9.dir/CMakeCCompilerABI.c.o   -c /home/anatoly/clion-2018.2.4/bin/cmake/linux/share/cmake-3.12/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_742d9]
+  ignore line: [/home/anatoly/clion-2018.2.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_742d9.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/gcc     -v CMakeFiles/cmTC_742d9.dir/CMakeCCompilerABI.c.o  -o cmTC_742d9 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/gcc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper]
@@ -90,13 +90,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 7.4.0 (Ubuntu 7.4.0-1ubuntu1~18.04.1) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e2bf9' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccOsUTSq.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_e2bf9 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_e2bf9.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_742d9' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cctGsibo.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_742d9 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_742d9.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccOsUTSq.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cctGsibo.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -115,7 +115,7 @@ Parsed C implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_e2bf9] ==> ignore
+    arg [cmTC_742d9] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
@@ -127,7 +127,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..]
-    arg [CMakeFiles/cmTC_e2bf9.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_742d9.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--push-state] ==> ignore
     arg [--as-needed] ==> ignore
@@ -157,17 +157,17 @@ Parsed C implicit link information from above output:
 
 
 Detecting C [-std=c11] compiler features compiled with the following output:
-Change Dir: /home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_08261/fast"
-/usr/bin/make -f CMakeFiles/cmTC_08261.dir/build.make CMakeFiles/cmTC_08261.dir/build
-make[1]: вход в каталог «/home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp»
-Building C object CMakeFiles/cmTC_08261.dir/feature_tests.c.o
-/usr/bin/gcc   -std=c11 -o CMakeFiles/cmTC_08261.dir/feature_tests.c.o   -c /home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_08261
-/home/anatoly/clion-2018.2.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_08261.dir/link.txt --verbose=1
-/usr/bin/gcc      CMakeFiles/cmTC_08261.dir/feature_tests.c.o  -o cmTC_08261 
-make[1]: выход из каталога «/home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp»
+Run Build Command:"/usr/bin/make" "cmTC_e7567/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e7567.dir/build.make CMakeFiles/cmTC_e7567.dir/build
+make[1]: вход в каталог «/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_e7567.dir/feature_tests.c.o
+/usr/bin/gcc   -std=c11 -o CMakeFiles/cmTC_e7567.dir/feature_tests.c.o   -c /home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_e7567
+/home/anatoly/clion-2018.2.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e7567.dir/link.txt --verbose=1
+/usr/bin/gcc      CMakeFiles/cmTC_e7567.dir/feature_tests.c.o  -o cmTC_e7567 
+make[1]: выход из каталога «/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp»
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -177,17 +177,17 @@ make[1]: выход из каталога «/home/anatoly/projects/UnkillableSta
 
 
 Detecting C [-std=c99] compiler features compiled with the following output:
-Change Dir: /home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_9ef30/fast"
-/usr/bin/make -f CMakeFiles/cmTC_9ef30.dir/build.make CMakeFiles/cmTC_9ef30.dir/build
-make[1]: вход в каталог «/home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp»
-Building C object CMakeFiles/cmTC_9ef30.dir/feature_tests.c.o
-/usr/bin/gcc   -std=c99 -o CMakeFiles/cmTC_9ef30.dir/feature_tests.c.o   -c /home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_9ef30
-/home/anatoly/clion-2018.2.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9ef30.dir/link.txt --verbose=1
-/usr/bin/gcc      CMakeFiles/cmTC_9ef30.dir/feature_tests.c.o  -o cmTC_9ef30 
-make[1]: выход из каталога «/home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp»
+Run Build Command:"/usr/bin/make" "cmTC_50b81/fast"
+/usr/bin/make -f CMakeFiles/cmTC_50b81.dir/build.make CMakeFiles/cmTC_50b81.dir/build
+make[1]: вход в каталог «/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_50b81.dir/feature_tests.c.o
+/usr/bin/gcc   -std=c99 -o CMakeFiles/cmTC_50b81.dir/feature_tests.c.o   -c /home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_50b81
+/home/anatoly/clion-2018.2.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_50b81.dir/link.txt --verbose=1
+/usr/bin/gcc      CMakeFiles/cmTC_50b81.dir/feature_tests.c.o  -o cmTC_50b81 
+make[1]: выход из каталога «/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp»
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -197,17 +197,17 @@ make[1]: выход из каталога «/home/anatoly/projects/UnkillableSta
 
 
 Detecting C [-std=c90] compiler features compiled with the following output:
-Change Dir: /home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_e9fe7/fast"
-/usr/bin/make -f CMakeFiles/cmTC_e9fe7.dir/build.make CMakeFiles/cmTC_e9fe7.dir/build
-make[1]: вход в каталог «/home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp»
-Building C object CMakeFiles/cmTC_e9fe7.dir/feature_tests.c.o
-/usr/bin/gcc   -std=c90 -o CMakeFiles/cmTC_e9fe7.dir/feature_tests.c.o   -c /home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_e9fe7
-/home/anatoly/clion-2018.2.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e9fe7.dir/link.txt --verbose=1
-/usr/bin/gcc      CMakeFiles/cmTC_e9fe7.dir/feature_tests.c.o  -o cmTC_e9fe7 
-make[1]: выход из каталога «/home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp»
+Run Build Command:"/usr/bin/make" "cmTC_aa7af/fast"
+/usr/bin/make -f CMakeFiles/cmTC_aa7af.dir/build.make CMakeFiles/cmTC_aa7af.dir/build
+make[1]: вход в каталог «/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_aa7af.dir/feature_tests.c.o
+/usr/bin/gcc   -std=c90 -o CMakeFiles/cmTC_aa7af.dir/feature_tests.c.o   -c /home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_aa7af
+/home/anatoly/clion-2018.2.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aa7af.dir/link.txt --verbose=1
+/usr/bin/gcc      CMakeFiles/cmTC_aa7af.dir/feature_tests.c.o  -o cmTC_aa7af 
+make[1]: выход из каталога «/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp»
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -215,30 +215,30 @@ make[1]: выход из каталога «/home/anatoly/projects/UnkillableSta
     Feature record: C_FEATURE:0c_static_assert
     Feature record: C_FEATURE:0c_variadic_macros
 Determining if the CXX compiler works passed with the following output:
-Change Dir: /home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_6bcff/fast"
-/usr/bin/make -f CMakeFiles/cmTC_6bcff.dir/build.make CMakeFiles/cmTC_6bcff.dir/build
-make[1]: вход в каталог «/home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp»
-Building CXX object CMakeFiles/cmTC_6bcff.dir/testCXXCompiler.cxx.o
-/usr/bin/g++     -o CMakeFiles/cmTC_6bcff.dir/testCXXCompiler.cxx.o -c /home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_6bcff
-/home/anatoly/clion-2018.2.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6bcff.dir/link.txt --verbose=1
-/usr/bin/g++       CMakeFiles/cmTC_6bcff.dir/testCXXCompiler.cxx.o  -o cmTC_6bcff 
-make[1]: выход из каталога «/home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp»
+Run Build Command:"/usr/bin/make" "cmTC_bde55/fast"
+/usr/bin/make -f CMakeFiles/cmTC_bde55.dir/build.make CMakeFiles/cmTC_bde55.dir/build
+make[1]: вход в каталог «/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building CXX object CMakeFiles/cmTC_bde55.dir/testCXXCompiler.cxx.o
+/usr/bin/g++     -o CMakeFiles/cmTC_bde55.dir/testCXXCompiler.cxx.o -c /home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_bde55
+/home/anatoly/clion-2018.2.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bde55.dir/link.txt --verbose=1
+/usr/bin/g++       CMakeFiles/cmTC_bde55.dir/testCXXCompiler.cxx.o  -o cmTC_bde55 
+make[1]: выход из каталога «/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp»
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_5160f/fast"
-/usr/bin/make -f CMakeFiles/cmTC_5160f.dir/build.make CMakeFiles/cmTC_5160f.dir/build
-make[1]: вход в каталог «/home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp»
-Building CXX object CMakeFiles/cmTC_5160f.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/g++     -o CMakeFiles/cmTC_5160f.dir/CMakeCXXCompilerABI.cpp.o -c /home/anatoly/clion-2018.2.4/bin/cmake/linux/share/cmake-3.12/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_5160f
-/home/anatoly/clion-2018.2.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5160f.dir/link.txt --verbose=1
-/usr/bin/g++      -v CMakeFiles/cmTC_5160f.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_5160f 
+Run Build Command:"/usr/bin/make" "cmTC_86c1d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_86c1d.dir/build.make CMakeFiles/cmTC_86c1d.dir/build
+make[1]: вход в каталог «/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building CXX object CMakeFiles/cmTC_86c1d.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/g++     -o CMakeFiles/cmTC_86c1d.dir/CMakeCXXCompilerABI.cpp.o -c /home/anatoly/clion-2018.2.4/bin/cmake/linux/share/cmake-3.12/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_86c1d
+/home/anatoly/clion-2018.2.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_86c1d.dir/link.txt --verbose=1
+/usr/bin/g++      -v CMakeFiles/cmTC_86c1d.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_86c1d 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/g++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
@@ -250,24 +250,24 @@ Thread model: posix
 gcc version 7.4.0 (Ubuntu 7.4.0-1ubuntu1~18.04.1) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_5160f' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccbhBOcn.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_5160f /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_5160f.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_5160f' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
-make[1]: выход из каталога «/home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp»
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_86c1d' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccK7P0x0.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_86c1d /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_86c1d.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_86c1d' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+make[1]: выход из каталога «/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp»
 
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_5160f/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_5160f.dir/build.make CMakeFiles/cmTC_5160f.dir/build]
-  ignore line: [make[1]: вход в каталог «/home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp»]
-  ignore line: [Building CXX object CMakeFiles/cmTC_5160f.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/g++     -o CMakeFiles/cmTC_5160f.dir/CMakeCXXCompilerABI.cpp.o -c /home/anatoly/clion-2018.2.4/bin/cmake/linux/share/cmake-3.12/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_5160f]
-  ignore line: [/home/anatoly/clion-2018.2.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5160f.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/g++      -v CMakeFiles/cmTC_5160f.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_5160f ]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_86c1d/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_86c1d.dir/build.make CMakeFiles/cmTC_86c1d.dir/build]
+  ignore line: [make[1]: вход в каталог «/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp»]
+  ignore line: [Building CXX object CMakeFiles/cmTC_86c1d.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/g++     -o CMakeFiles/cmTC_86c1d.dir/CMakeCXXCompilerABI.cpp.o -c /home/anatoly/clion-2018.2.4/bin/cmake/linux/share/cmake-3.12/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_86c1d]
+  ignore line: [/home/anatoly/clion-2018.2.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_86c1d.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/g++      -v CMakeFiles/cmTC_86c1d.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_86c1d ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/g++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper]
@@ -279,13 +279,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 7.4.0 (Ubuntu 7.4.0-1ubuntu1~18.04.1) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_5160f' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccbhBOcn.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_5160f /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_5160f.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_86c1d' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccK7P0x0.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_86c1d /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_86c1d.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccbhBOcn.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccK7P0x0.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -304,7 +304,7 @@ Parsed CXX implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_5160f] ==> ignore
+    arg [cmTC_86c1d] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
@@ -316,7 +316,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..]
-    arg [CMakeFiles/cmTC_5160f.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_86c1d.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -342,17 +342,17 @@ Parsed CXX implicit link information from above output:
 
 
 Detecting CXX [-std=c++1z] compiler features compiled with the following output:
-Change Dir: /home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_c2e1b/fast"
-/usr/bin/make -f CMakeFiles/cmTC_c2e1b.dir/build.make CMakeFiles/cmTC_c2e1b.dir/build
-make[1]: вход в каталог «/home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp»
-Building CXX object CMakeFiles/cmTC_c2e1b.dir/feature_tests.cxx.o
-/usr/bin/g++    -std=c++1z -o CMakeFiles/cmTC_c2e1b.dir/feature_tests.cxx.o -c /home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_c2e1b
-/home/anatoly/clion-2018.2.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c2e1b.dir/link.txt --verbose=1
-/usr/bin/g++       CMakeFiles/cmTC_c2e1b.dir/feature_tests.cxx.o  -o cmTC_c2e1b 
-make[1]: выход из каталога «/home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp»
+Run Build Command:"/usr/bin/make" "cmTC_f8a33/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f8a33.dir/build.make CMakeFiles/cmTC_f8a33.dir/build
+make[1]: вход в каталог «/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building CXX object CMakeFiles/cmTC_f8a33.dir/feature_tests.cxx.o
+/usr/bin/g++    -std=c++1z -o CMakeFiles/cmTC_f8a33.dir/feature_tests.cxx.o -c /home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_f8a33
+/home/anatoly/clion-2018.2.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f8a33.dir/link.txt --verbose=1
+/usr/bin/g++       CMakeFiles/cmTC_f8a33.dir/feature_tests.cxx.o  -o cmTC_f8a33 
+make[1]: выход из каталога «/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp»
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -415,17 +415,17 @@ make[1]: выход из каталога «/home/anatoly/projects/UnkillableSta
 
 
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
-Change Dir: /home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_560cd/fast"
-/usr/bin/make -f CMakeFiles/cmTC_560cd.dir/build.make CMakeFiles/cmTC_560cd.dir/build
-make[1]: вход в каталог «/home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp»
-Building CXX object CMakeFiles/cmTC_560cd.dir/feature_tests.cxx.o
-/usr/bin/g++    -std=c++14 -o CMakeFiles/cmTC_560cd.dir/feature_tests.cxx.o -c /home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_560cd
-/home/anatoly/clion-2018.2.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_560cd.dir/link.txt --verbose=1
-/usr/bin/g++       CMakeFiles/cmTC_560cd.dir/feature_tests.cxx.o  -o cmTC_560cd 
-make[1]: выход из каталога «/home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp»
+Run Build Command:"/usr/bin/make" "cmTC_85ea9/fast"
+/usr/bin/make -f CMakeFiles/cmTC_85ea9.dir/build.make CMakeFiles/cmTC_85ea9.dir/build
+make[1]: вход в каталог «/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building CXX object CMakeFiles/cmTC_85ea9.dir/feature_tests.cxx.o
+/usr/bin/g++    -std=c++14 -o CMakeFiles/cmTC_85ea9.dir/feature_tests.cxx.o -c /home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_85ea9
+/home/anatoly/clion-2018.2.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_85ea9.dir/link.txt --verbose=1
+/usr/bin/g++       CMakeFiles/cmTC_85ea9.dir/feature_tests.cxx.o  -o cmTC_85ea9 
+make[1]: выход из каталога «/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp»
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -488,17 +488,17 @@ make[1]: выход из каталога «/home/anatoly/projects/UnkillableSta
 
 
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
-Change Dir: /home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_c6582/fast"
-/usr/bin/make -f CMakeFiles/cmTC_c6582.dir/build.make CMakeFiles/cmTC_c6582.dir/build
-make[1]: вход в каталог «/home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp»
-Building CXX object CMakeFiles/cmTC_c6582.dir/feature_tests.cxx.o
-/usr/bin/g++    -std=c++11 -o CMakeFiles/cmTC_c6582.dir/feature_tests.cxx.o -c /home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_c6582
-/home/anatoly/clion-2018.2.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c6582.dir/link.txt --verbose=1
-/usr/bin/g++       CMakeFiles/cmTC_c6582.dir/feature_tests.cxx.o  -o cmTC_c6582 
-make[1]: выход из каталога «/home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp»
+Run Build Command:"/usr/bin/make" "cmTC_6d4f8/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6d4f8.dir/build.make CMakeFiles/cmTC_6d4f8.dir/build
+make[1]: вход в каталог «/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building CXX object CMakeFiles/cmTC_6d4f8.dir/feature_tests.cxx.o
+/usr/bin/g++    -std=c++11 -o CMakeFiles/cmTC_6d4f8.dir/feature_tests.cxx.o -c /home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_6d4f8
+/home/anatoly/clion-2018.2.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6d4f8.dir/link.txt --verbose=1
+/usr/bin/g++       CMakeFiles/cmTC_6d4f8.dir/feature_tests.cxx.o  -o cmTC_6d4f8 
+make[1]: выход из каталога «/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp»
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -561,17 +561,17 @@ make[1]: выход из каталога «/home/anatoly/projects/UnkillableSta
 
 
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
-Change Dir: /home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_51483/fast"
-/usr/bin/make -f CMakeFiles/cmTC_51483.dir/build.make CMakeFiles/cmTC_51483.dir/build
-make[1]: вход в каталог «/home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp»
-Building CXX object CMakeFiles/cmTC_51483.dir/feature_tests.cxx.o
-/usr/bin/g++    -std=c++98 -o CMakeFiles/cmTC_51483.dir/feature_tests.cxx.o -c /home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_51483
-/home/anatoly/clion-2018.2.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_51483.dir/link.txt --verbose=1
-/usr/bin/g++       CMakeFiles/cmTC_51483.dir/feature_tests.cxx.o  -o cmTC_51483 
-make[1]: выход из каталога «/home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp»
+Run Build Command:"/usr/bin/make" "cmTC_59fe6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_59fe6.dir/build.make CMakeFiles/cmTC_59fe6.dir/build
+make[1]: вход в каталог «/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building CXX object CMakeFiles/cmTC_59fe6.dir/feature_tests.cxx.o
+/usr/bin/g++    -std=c++98 -o CMakeFiles/cmTC_59fe6.dir/feature_tests.cxx.o -c /home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_59fe6
+/home/anatoly/clion-2018.2.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_59fe6.dir/link.txt --verbose=1
+/usr/bin/g++       CMakeFiles/cmTC_59fe6.dir/feature_tests.cxx.o  -o cmTC_59fe6 
+make[1]: выход из каталога «/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp»
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -632,30 +632,30 @@ make[1]: выход из каталога «/home/anatoly/projects/UnkillableSta
     Feature record: CXX_FEATURE:0cxx_variadic_macros
     Feature record: CXX_FEATURE:0cxx_variadic_templates
 Determining if the include file pthread.h exists passed with the following output:
-Change Dir: /home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_249a4/fast"
-/usr/bin/make -f CMakeFiles/cmTC_249a4.dir/build.make CMakeFiles/cmTC_249a4.dir/build
-make[1]: вход в каталог «/home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp»
-Building C object CMakeFiles/cmTC_249a4.dir/CheckIncludeFile.c.o
-/usr/bin/gcc    -o CMakeFiles/cmTC_249a4.dir/CheckIncludeFile.c.o   -c /home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_249a4
-/home/anatoly/clion-2018.2.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_249a4.dir/link.txt --verbose=1
-/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_249a4.dir/CheckIncludeFile.c.o  -o cmTC_249a4 
-make[1]: выход из каталога «/home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp»
+Run Build Command:"/usr/bin/make" "cmTC_ef6bc/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ef6bc.dir/build.make CMakeFiles/cmTC_ef6bc.dir/build
+make[1]: вход в каталог «/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_ef6bc.dir/CheckIncludeFile.c.o
+/usr/bin/gcc    -o CMakeFiles/cmTC_ef6bc.dir/CheckIncludeFile.c.o   -c /home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_ef6bc
+/home/anatoly/clion-2018.2.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ef6bc.dir/link.txt --verbose=1
+/usr/bin/gcc      -rdynamic CMakeFiles/cmTC_ef6bc.dir/CheckIncludeFile.c.o  -o cmTC_ef6bc 
+make[1]: выход из каталога «/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp»
 
 
 Determining if the function pthread_create exists in the pthread passed with the following output:
-Change Dir: /home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_cd241/fast"
-/usr/bin/make -f CMakeFiles/cmTC_cd241.dir/build.make CMakeFiles/cmTC_cd241.dir/build
-make[1]: вход в каталог «/home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp»
-Building C object CMakeFiles/cmTC_cd241.dir/CheckFunctionExists.c.o
-/usr/bin/gcc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_cd241.dir/CheckFunctionExists.c.o   -c /home/anatoly/clion-2018.2.4/bin/cmake/linux/share/cmake-3.12/Modules/CheckFunctionExists.c
-Linking C executable cmTC_cd241
-/home/anatoly/clion-2018.2.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cd241.dir/link.txt --verbose=1
-/usr/bin/gcc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_cd241.dir/CheckFunctionExists.c.o  -o cmTC_cd241 -lpthread 
-make[1]: выход из каталога «/home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles/CMakeTmp»
+Run Build Command:"/usr/bin/make" "cmTC_39787/fast"
+/usr/bin/make -f CMakeFiles/cmTC_39787.dir/build.make CMakeFiles/cmTC_39787.dir/build
+make[1]: вход в каталог «/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_39787.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_39787.dir/CheckFunctionExists.c.o   -c /home/anatoly/clion-2018.2.4/bin/cmake/linux/share/cmake-3.12/Modules/CheckFunctionExists.c
+Linking C executable cmTC_39787
+/home/anatoly/clion-2018.2.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_39787.dir/link.txt --verbose=1
+/usr/bin/gcc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_39787.dir/CheckFunctionExists.c.o  -o cmTC_39787 -lpthread 
+make[1]: выход из каталога «/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles/CMakeTmp»
 
 

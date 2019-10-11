@@ -8,24 +8,24 @@
 		<Option virtualFolders="CMake Files\;CMake Files\tests\;CMake Files\tests\googletest\;CMake Files\tests\googletest\googlemock\;CMake Files\tests\googletest\googlemock\cmake\;CMake Files\tests\googletest\googletest\;CMake Files\tests\googletest\googletest\cmake\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/anatoly/projects/UnkillableStack/cmake-build-debug/tests/googletest/googletest"/>
+				<Option working_dir="/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/tests/googletest/googletest"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/anatoly/projects/UnkillableStack/cmake-build-debug/tests/googletest/googletest/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anatoly/projects/UnkillableStack/cmake-build-debug/tests/googletest/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/anatoly/projects/UnkillableStack/cmake-build-debug/tests/googletest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anatoly/projects/UnkillableStack/cmake-build-debug/tests/googletest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/tests/googletest/googletest/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/tests/googletest/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/tests/googletest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/tests/googletest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest_main">
-				<Option output="/home/anatoly/projects/UnkillableStack/cmake-build-debug/lib/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/anatoly/projects/UnkillableStack/cmake-build-debug/tests/googletest/googletest"/>
+				<Option output="/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/lib/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/tests/googletest/googletest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/anatoly/projects/UnkillableStack/tests/googletest/googletest/include"/>
-					<Add directory="/home/anatoly/projects/UnkillableStack/tests/googletest/googletest"/>
+					<Add directory="/home/anatoly/Industrial-projects/Dumps/tests/googletest/googletest/include"/>
+					<Add directory="/home/anatoly/Industrial-projects/Dumps/tests/googletest/googletest"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -36,21 +36,21 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/anatoly/projects/UnkillableStack/cmake-build-debug/tests/googletest/googletest/Makefile&quot;  VERBOSE=1 gtest_main"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anatoly/projects/UnkillableStack/cmake-build-debug/tests/googletest/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/anatoly/projects/UnkillableStack/cmake-build-debug/tests/googletest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anatoly/projects/UnkillableStack/cmake-build-debug/tests/googletest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/tests/googletest/googletest/Makefile&quot;  VERBOSE=1 gtest_main"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/tests/googletest/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/tests/googletest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/tests/googletest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest_main/fast">
-				<Option output="/home/anatoly/projects/UnkillableStack/cmake-build-debug/lib/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/anatoly/projects/UnkillableStack/cmake-build-debug/tests/googletest/googletest"/>
+				<Option output="/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/lib/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/tests/googletest/googletest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/anatoly/projects/UnkillableStack/tests/googletest/googletest/include"/>
-					<Add directory="/home/anatoly/projects/UnkillableStack/tests/googletest/googletest"/>
+					<Add directory="/home/anatoly/Industrial-projects/Dumps/tests/googletest/googletest/include"/>
+					<Add directory="/home/anatoly/Industrial-projects/Dumps/tests/googletest/googletest"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -61,21 +61,21 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/anatoly/projects/UnkillableStack/cmake-build-debug/tests/googletest/googletest/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anatoly/projects/UnkillableStack/cmake-build-debug/tests/googletest/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/anatoly/projects/UnkillableStack/cmake-build-debug/tests/googletest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anatoly/projects/UnkillableStack/cmake-build-debug/tests/googletest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/tests/googletest/googletest/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/tests/googletest/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/tests/googletest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/tests/googletest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest">
-				<Option output="/home/anatoly/projects/UnkillableStack/cmake-build-debug/lib/libgtestd.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/anatoly/projects/UnkillableStack/cmake-build-debug/tests/googletest/googletest"/>
+				<Option output="/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/lib/libgtestd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/tests/googletest/googletest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/anatoly/projects/UnkillableStack/tests/googletest/googletest/include"/>
-					<Add directory="/home/anatoly/projects/UnkillableStack/tests/googletest/googletest"/>
+					<Add directory="/home/anatoly/Industrial-projects/Dumps/tests/googletest/googletest/include"/>
+					<Add directory="/home/anatoly/Industrial-projects/Dumps/tests/googletest/googletest"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -86,21 +86,21 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/anatoly/projects/UnkillableStack/cmake-build-debug/tests/googletest/googletest/Makefile&quot;  VERBOSE=1 gtest"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anatoly/projects/UnkillableStack/cmake-build-debug/tests/googletest/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/anatoly/projects/UnkillableStack/cmake-build-debug/tests/googletest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anatoly/projects/UnkillableStack/cmake-build-debug/tests/googletest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/tests/googletest/googletest/Makefile&quot;  VERBOSE=1 gtest"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/tests/googletest/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/tests/googletest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/tests/googletest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest/fast">
-				<Option output="/home/anatoly/projects/UnkillableStack/cmake-build-debug/lib/libgtestd.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/anatoly/projects/UnkillableStack/cmake-build-debug/tests/googletest/googletest"/>
+				<Option output="/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/lib/libgtestd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/tests/googletest/googletest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/anatoly/projects/UnkillableStack/tests/googletest/googletest/include"/>
-					<Add directory="/home/anatoly/projects/UnkillableStack/tests/googletest/googletest"/>
+					<Add directory="/home/anatoly/Industrial-projects/Dumps/tests/googletest/googletest/include"/>
+					<Add directory="/home/anatoly/Industrial-projects/Dumps/tests/googletest/googletest"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -111,47 +111,47 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/anatoly/projects/UnkillableStack/cmake-build-debug/tests/googletest/googletest/Makefile&quot;  VERBOSE=1 gtest/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anatoly/projects/UnkillableStack/cmake-build-debug/tests/googletest/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/anatoly/projects/UnkillableStack/cmake-build-debug/tests/googletest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anatoly/projects/UnkillableStack/cmake-build-debug/tests/googletest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/tests/googletest/googletest/Makefile&quot;  VERBOSE=1 gtest/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/tests/googletest/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/tests/googletest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anatoly/Industrial-projects/Dumps/cmake-build-debug/tests/googletest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/anatoly/projects/UnkillableStack/tests/googletest/googletest/src/gtest-all.cc">
+		<Unit filename="/home/anatoly/Industrial-projects/Dumps/tests/googletest/googletest/src/gtest-all.cc">
 			<Option target="gtest"/>
 		</Unit>
-		<Unit filename="/home/anatoly/projects/UnkillableStack/tests/googletest/googletest/src/gtest_main.cc">
+		<Unit filename="/home/anatoly/Industrial-projects/Dumps/tests/googletest/googletest/src/gtest_main.cc">
 			<Option target="gtest_main"/>
 		</Unit>
-		<Unit filename="/home/anatoly/projects/UnkillableStack/CMakeLists.txt">
+		<Unit filename="/home/anatoly/Industrial-projects/Dumps/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/home/anatoly/projects/UnkillableStack/tests/googletest/CMakeLists.txt">
+		<Unit filename="/home/anatoly/Industrial-projects/Dumps/tests/googletest/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\tests\googletest\"/>
 		</Unit>
-		<Unit filename="/home/anatoly/projects/UnkillableStack/tests/googletest/googlemock/CMakeLists.txt">
+		<Unit filename="/home/anatoly/Industrial-projects/Dumps/tests/googletest/googlemock/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\tests\googletest\googlemock\"/>
 		</Unit>
-		<Unit filename="/home/anatoly/projects/UnkillableStack/tests/googletest/googlemock/cmake/gmock.pc.in">
+		<Unit filename="/home/anatoly/Industrial-projects/Dumps/tests/googletest/googlemock/cmake/gmock.pc.in">
 			<Option virtualFolder="CMake Files\tests\googletest\googlemock\cmake\"/>
 		</Unit>
-		<Unit filename="/home/anatoly/projects/UnkillableStack/tests/googletest/googlemock/cmake/gmock_main.pc.in">
+		<Unit filename="/home/anatoly/Industrial-projects/Dumps/tests/googletest/googlemock/cmake/gmock_main.pc.in">
 			<Option virtualFolder="CMake Files\tests\googletest\googlemock\cmake\"/>
 		</Unit>
-		<Unit filename="/home/anatoly/projects/UnkillableStack/tests/googletest/googletest/CMakeLists.txt">
+		<Unit filename="/home/anatoly/Industrial-projects/Dumps/tests/googletest/googletest/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\tests\googletest\googletest\"/>
 		</Unit>
-		<Unit filename="/home/anatoly/projects/UnkillableStack/tests/googletest/googletest/cmake/Config.cmake.in">
+		<Unit filename="/home/anatoly/Industrial-projects/Dumps/tests/googletest/googletest/cmake/Config.cmake.in">
 			<Option virtualFolder="CMake Files\tests\googletest\googletest\cmake\"/>
 		</Unit>
-		<Unit filename="/home/anatoly/projects/UnkillableStack/tests/googletest/googletest/cmake/gtest.pc.in">
+		<Unit filename="/home/anatoly/Industrial-projects/Dumps/tests/googletest/googletest/cmake/gtest.pc.in">
 			<Option virtualFolder="CMake Files\tests\googletest\googletest\cmake\"/>
 		</Unit>
-		<Unit filename="/home/anatoly/projects/UnkillableStack/tests/googletest/googletest/cmake/gtest_main.pc.in">
+		<Unit filename="/home/anatoly/Industrial-projects/Dumps/tests/googletest/googletest/cmake/gtest_main.pc.in">
 			<Option virtualFolder="CMake Files\tests\googletest\googletest\cmake\"/>
 		</Unit>
-		<Unit filename="/home/anatoly/projects/UnkillableStack/tests/googletest/googletest/cmake/internal_utils.cmake">
+		<Unit filename="/home/anatoly/Industrial-projects/Dumps/tests/googletest/googletest/cmake/internal_utils.cmake">
 			<Option virtualFolder="CMake Files\tests\googletest\googletest\cmake\"/>
 		</Unit>
 	</Project>

@@ -48,10 +48,10 @@ RM = /home/anatoly/clion-2018.2.4/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/anatoly/projects/UnkillableStack
+CMAKE_SOURCE_DIR = /home/anatoly/Industrial-projects/Dumps
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/anatoly/projects/UnkillableStack/cmake-build-debug
+CMAKE_BINARY_DIR = /home/anatoly/Industrial-projects/Dumps/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -126,14 +126,14 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/anatoly/projects/UnkillableStack/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles /home/anatoly/projects/UnkillableStack/cmake-build-debug/tests/googletest/CMakeFiles/progress.marks
-	cd /home/anatoly/projects/UnkillableStack/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 tests/googletest/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anatoly/projects/UnkillableStack/cmake-build-debug/CMakeFiles 0
+	cd /home/anatoly/Industrial-projects/Dumps/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles /home/anatoly/Industrial-projects/Dumps/cmake-build-debug/tests/googletest/CMakeFiles/progress.marks
+	cd /home/anatoly/Industrial-projects/Dumps/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 tests/googletest/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anatoly/Industrial-projects/Dumps/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/anatoly/projects/UnkillableStack/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 tests/googletest/clean
+	cd /home/anatoly/Industrial-projects/Dumps/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 tests/googletest/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,17 +143,17 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/anatoly/projects/UnkillableStack/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 tests/googletest/preinstall
+	cd /home/anatoly/Industrial-projects/Dumps/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 tests/googletest/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/anatoly/projects/UnkillableStack/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 tests/googletest/preinstall
+	cd /home/anatoly/Industrial-projects/Dumps/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 tests/googletest/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/anatoly/projects/UnkillableStack/cmake-build-debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/anatoly/Industrial-projects/Dumps/cmake-build-debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Help Target
@@ -179,6 +179,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/anatoly/projects/UnkillableStack/cmake-build-debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/anatoly/Industrial-projects/Dumps/cmake-build-debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
