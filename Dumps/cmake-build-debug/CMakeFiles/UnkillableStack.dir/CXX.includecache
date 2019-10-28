@@ -328,3 +328,9 @@ Stack.h
 gtest/gtest.h
 /home/anatoly/Industrial-projects/Dumps/gtest/gtest.h
 
+/home/anatoly/Industrial-projects/Dumps/tests/testing.cpp
+../Stack.h
+/home/anatoly/Industrial-projects/Dumps/Stack.h
+gtest/gtest.h
+/home/anatoly/Industrial-projects/Dumps/tests/gtest/gtest.h
+
