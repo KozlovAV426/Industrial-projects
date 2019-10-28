@@ -1,0 +1,26 @@
+push 1
+pop dx
+push 5
+call fact
+push dx
+out
+end
+fact:
+pop cx
+pop ax
+cmp ax, 1
+push cx
+jz one
+jmp next
+one:
+ret
+next:
+push ax
+push 1
+push ax
+sub
+call fact
+push dx
+mul
+pop dx
+ret

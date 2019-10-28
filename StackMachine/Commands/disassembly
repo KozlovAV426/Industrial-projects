@@ -1,0 +1,12 @@
+push ax 
+push ax 
+push ax 
+pop bx 
+mov ax, bx
+add 
+mul 
+sub 
+div 
+in 
+out 
+end 

@@ -1,0 +1,57 @@
+push 2
+pop ax
+push -2
+pop bx
+push -4
+pop cx
+cmp ax, 0
+jz linear
+dscrm:
+push bx
+push bx
+mul
+push -4
+push ax
+push cx
+mul
+mul
+add
+sqrt
+pop dx
+cmp dx, 0
+jl fault
+jmp solution
+fault:
+end
+solution:
+push 2
+push ax
+mul
+push -1
+push bx
+mul
+push dx
+add
+div
+out_f
+push 2
+push ax
+mul
+push dx
+push -1
+push bx
+mul
+sub
+div
+out_f
+end
+linear:
+cmp bx, 0
+jz fault
+push cx
+push -1
+mul
+push bx
+div
+out_f
+end
