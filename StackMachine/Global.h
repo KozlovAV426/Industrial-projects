@@ -1,10 +1,15 @@
+#pragma once
+
 #include <stdint.h>
 #include <string.h>
 #include <iostream>
+#include <vector>
 
 
-size_t const LINE_SIZE = 15;
-size_t const MAX_SHIFT = 50;
+const double  DPRECISION = 1000.0;
+const size_t  PRECISION = 1000;
+const size_t  LINE_SIZE = 15;
+const size_t  MAX_SHIFT = 50;
 
 struct Instruction {
     uint8_t instruction = 0;
@@ -19,3 +24,4 @@ enum Cmd {
     Jz, Jl, Ja, Ret, Call,
     Sqrt, Out_f
 };
+

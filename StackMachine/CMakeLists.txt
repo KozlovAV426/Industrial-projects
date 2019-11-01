@@ -14,5 +14,5 @@ include_directories("${PROJECT_SOURCE_DIR}")
 #EXECUTE_PROCESS(COMMAND python "${PROJECT_SOURCE_DIR}/undef_adder.py"
         #WORKING_DIRECTORY ${PROJECT_SOURCE_DIR})
 
-add_executable(UnkillableStack main.cpp Stack.h tests/testing.cpp Assembly.h Assembly.cpp Execute.h Execute.cpp Global.h Codegeneration.h Codegeneration.cpp)
+add_executable(UnkillableStack main.cpp Stack.h tests/testing.cpp Assembly.h Assembly.cpp Execute.h Execute.cpp Global.h Codegeneration.h Codegeneration.cpp CommandsDescription.h CommandClass.h)
 target_link_libraries(UnkillableStack gtest gtest_main)

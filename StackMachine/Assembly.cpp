@@ -1,14 +1,12 @@
 #include "Assembly.h"
-#include "Global.h"
 #include "Stack.h"
+#include "Global.h"
+#include "CommandClass.h"
 #include <unordered_map>
 
 
 Instruction ParseCommandAndArgument(const char* command, std::unordered_map<std::string, int>& table);
 
-void WriteCommand(FILE* out_ptr, const Instruction* instr);
-
-void Disassembly(const char* asm_file, const char* out_file);
 
 int ExecuteInstruction(UnkillableStack<int, IntViewer>& stack, int* registers,
                        const Instruction* instr, FILE* in_ptr, FILE* out_ptr, size_t& j, int& flag);
@@ -146,142 +144,30 @@ Instruction ParseCommandAndArgument(const char* command, std::unordered_map<std:
     char* end;
     size_t arg_index = strlen(command) + 1;
     Instruction code;
+    bool no_label = false;
+    for (auto cmd : ALL_COMMANDS) {
+        if (!strcmp(command, cmd.name)) {
+            no_label = true;
+            code.instruction = cmd.code;
 
-    if (!strcmp(command, "push")) {
-        if (command[arg_index] >= 'a' && command[arg_index] <= 'e') {
-            code.instruction = 1;
-            code.farg = command[arg_index] - 'a';
-        }
-        else {
-            int arg = strtol(command + arg_index, &end, 10);
-            code.instruction = 2;
-            code.farg = arg;
-        }
-    }
-    else if (!strcmp(command, "pop")) {
-        if (command[arg_index] >= 'a' && command[arg_index] <= 'd') {
-            code.instruction = 3;
-            code.farg = command[arg_index] - 'a';
-        }
-    }
-    else if (!strcmp(command, "mov")) {
-        if (command[arg_index] >= 'a' && command[arg_index] <= 'd') {
-            if (command[arg_index + 4] >= 'a' && command[arg_index + 4] <= 'd') {
-                code.instruction = 4;
-                code.farg = command[arg_index] - 'a';
-                code.sarg = command[arg_index + 4] - 'a';
+            uint8_t args_n = 0;
+            int arg = 0;
+
+            while (args_n < cmd.argument_numbers) {
+                if (command[arg_index] >= 'a' && command[arg_index] <= 'e') {
+                    arg = command[arg_index] - 'a';
+                }
+                else {
+                    arg = strtol(command + arg_index, &end, 10);
+                }
+                (args_n) ? code.sarg = arg : code.farg = arg;
+                ++args_n;
+                arg_index += 4;
             }
         }
     }
-    else if (!strcmp(command, "add")) {
-        code.instruction = 5;
-    }
-    else if (!strcmp(command, "mul")) {
-        code.instruction = 6;
-    }
-    else if (!strcmp(command, "sub")) {
-        code.instruction = 7;
-    }
-    else if (!strcmp(command, "div")) {
-        code.instruction = 8;
-    }
-    else if (!strcmp(command, "in")) {
-        code.instruction = 9;
-    }
-    else if (!strcmp(command, "out")) {
-        code.instruction = 10;
-    }
-    else if (!strcmp(command, "end")) {
-        code.instruction = 0;
-    }
-    else if (!strcmp(command, "jmp")) {
-        code.instruction = 11;
-
-    }
-    else if (!strcmp(command, "cmp")) {
-        code.instruction = 13;
-        code.farg = command[arg_index] - 'a';
-        int arg = strtol(command + arg_index + 4, &end, 10);
-        code.sarg = arg;
-
-    }
-    else if (!strcmp(command, "jz")) {
-        code.instruction = 14;
-    }
-    else if (!strcmp(command, "jl")) {
-        code.instruction = 15;
-    }
-    else if (!strcmp(command, "ja")) {
-        code.instruction = 16;
-    }
-    else if (!strcmp(command, "ret")) {
-        code.instruction = 17;
-    }
-    else if (!strcmp(command, "call")) {
-        code.instruction = 18;
-    }
-    else if (!strcmp(command, "sqrt")) {
-        code.instruction = 19;
-    }
-    else if (!strcmp(command, "out_f")) {
-        code.instruction = 20;
-    }
-    else {
-        code.instruction = 12;
-    }
+    if (!no_label) code.instruction = Cmd::Label;
     return code;
-}
-
-void WriteCommand(FILE* out_ptr, const Instruction* instr) {
-    switch (instr->instruction) {
-        case Cmd::Push_reg : fprintf(out_ptr, "push "); break;
-        case Cmd::Push_num : fprintf(out_ptr, "push "); break;
-        case Cmd::Pop      : fprintf(out_ptr, "pop ");  break;
-        case Cmd::Mov      : fprintf(out_ptr, "mov ");  break;
-        case Cmd::Add      : fprintf(out_ptr, "add ");  break;
-        case Cmd::Mul      : fprintf(out_ptr, "mul ");  break;
-        case Cmd::Sub      : fprintf(out_ptr, "sub ");  break;
-        case Cmd::Div      : fprintf(out_ptr, "div ");  break;
-        case Cmd::In       : fprintf(out_ptr, "in ");   break;
-        case Cmd::Out      : fprintf(out_ptr, "out "); break;
-        case Cmd::End      : fprintf(out_ptr, "end ");  break;
-    }
-    if (instr->instruction > Cmd::End && instr->instruction <= Cmd::Mov) {
-        char c[3] = "ax";
-        char d[3] = "ax";
-        switch (instr->farg) {
-            case 0 :
-                break;
-            case 1 :
-                c[0] += 1;
-                break;
-            case 2 :
-                c[0] += 2;
-                break;
-            case 3 :
-                c[0] += 3;
-                break;
-        }
-        switch (instr->sarg) {
-            case 0 :
-                break;
-            case 1 :
-                d[0] += 1;
-                break;
-            case 2 :
-                d[0] += 2;
-                break;
-            case 3 :
-                d[3] += 3;
-                break;
-        }
-        if (instr->instruction != Cmd::Mov) {
-            fprintf(out_ptr, "%s ", c);
-        } else {
-            fprintf(out_ptr, "%s, %s", c, d);
-        }
-    }
-    fprintf(out_ptr, "\n");
 }
 
 

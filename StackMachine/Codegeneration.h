@@ -1,8 +1,7 @@
 
-#define INSTRUCTION(NAME, CODE, ACTION) \
-    case CODE : { \
+#define EXECUTE_COMMAND(CODE, ACTION) \
+    case CODE : \
         ACTION \
         break;
-}
 
 

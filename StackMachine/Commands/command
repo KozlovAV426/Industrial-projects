@@ -2,25 +2,25 @@ push 1
 pop dx
 push 5
 call fact
-push dx
+pushr dx
 out
 end
 fact:
 pop cx
 pop ax
 cmp ax, 1
-push cx
+pushr cx
 jz one
 jmp next
 one:
 ret
 next:
-push ax
+pushr ax
 push 1
-push ax
+pushr ax
 sub
 call fact
-push dx
+pushr dx
 mul
 pop dx
 ret

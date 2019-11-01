@@ -7,12 +7,12 @@ pop cx
 cmp ax, 0
 jz linear
 dscrm:
-push bx
-push bx
+pushr bx
+pushr bx
 mul
 push -4
-push ax
-push cx
+pushr ax
+pushr cx
 mul
 mul
 add
@@ -25,21 +25,21 @@ fault:
 end
 solution:
 push 2
-push ax
+pushr ax
 mul
 push -1
-push bx
+pushr bx
 mul
-push dx
+pushr dx
 add
 div
 out_f
 push 2
-push ax
+pushr ax
 mul
-push dx
+pushr dx
 push -1
-push bx
+pushr bx
 mul
 sub
 div
@@ -48,10 +48,10 @@ end
 linear:
 cmp bx, 0
 jz fault
-push cx
+pushr cx
 push -1
 mul
-push bx
+pushr bx
 div
 out_f
 end
