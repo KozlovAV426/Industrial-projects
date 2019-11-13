@@ -1,0 +1,28 @@
+digraph Tree { 
+node [shape = "rectangle", style = "filled"]
+"animal?"->"Does it have a noise?";
+"Does it have a noise?"->"Is it a weapon?";
+"Is it a weapon?"->"knife";
+"knife"[shape = "circle", color = "burlywood1"]
+"Is it a weapon?"->"pistol";
+"pistol"[shape = "circle", color = "burlywood1"]
+"Does it have a noise?"->"Does it have a fur?";
+"Does it have a fur?"->"wolf";
+"wolf"[shape = "circle", color = "burlywood1"]
+"Does it have a fur?"->"bear";
+"bear"[shape = "circle", color = "burlywood1"]
+"animal?"->"ears?";
+"ears?"->"eyes?";
+"eyes?"->"dog";
+"dog"[shape = "circle", color = "burlywood1"]
+"eyes?"->"snake";
+"snake"[shape = "circle", color = "burlywood1"]
+"ears?"->"Does it have legs?";
+"Does it have legs?"->"is it a food?";
+"is it a food?"->"elephant";
+"elephant"[shape = "circle", color = "burlywood1"]
+"is it a food?"->"apple";
+"apple"[shape = "circle", color = "burlywood1"]
+"Does it have legs?"->"human";
+"human"[shape = "circle", color = "burlywood1"]
+} 
