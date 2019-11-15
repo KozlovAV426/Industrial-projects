@@ -2,6 +2,7 @@
 #include <unordered_map>
 
 class Akinator {
+    friend class AkinatorManager;
 private:
     Tree game_tree;
     std::unordered_map<std::string_view, int> table;
@@ -16,33 +17,23 @@ private:
 
     void FirstLaunch();
 
+    void ReserveBuffer();
+
     int FindLCA(int first, int second);
 
-    void PrintCommon(int node, int prev, int limit);
+    void PrintCommon(int node, int prev, int limit, FILE* output);
+
+    void SaveVoiceText(int node, FILE* output);
 
     void PrintNode(size_t node);
 
-    void PreOrder(size_t parent, size_t turn, char* str, FILE* ptr);
-
-    void SaveData(const char* file);
-
-    void WriteFromNode(size_t node, FILE* ptr, size_t space_n);
-
-    void CreateVisualization(const char* file);
-
     void UpdateHashTable(int node);
-
-    void TraverseForVisualization(size_t node, FILE* ptr);
-
-    void PrintForVisual(size_t node, FILE* ptr, size_t turn);
-
 
 public:
     Akinator();
 
-    void StartGame();
+    void Train();
 
-    void CompareWords();
+    void CompareWords(FILE* common, FILE* first, FILE* second);
 
-    void ReadData(const char* file);
 };

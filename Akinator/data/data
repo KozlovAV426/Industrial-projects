@@ -16,7 +16,11 @@
     }{
     "Animal"{
       "Mushroom"{
-        "Virus"{}{}
+        "big size"{
+          "Virus"{}{}
+          }{
+          "bacteria"{}{}
+          }
         }{
         "Can kill you"{
           "Lisichka"{}{}
@@ -33,7 +37,11 @@
           }
         }{
         "Has tail"{}{
-          "Cat"{}{}
+          "Has nails"{
+            "Cat"{}{}
+            }{
+            "bird"{}{}
+            }
           }
         }
       }

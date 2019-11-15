@@ -13,8 +13,11 @@ node [shape = "rectangle", style = "filled"]
 "Knife"[shape = "circle", color = "burlywood1"]
 "Alive"->"Animal";
 "Animal"->"Mushroom";
-"Mushroom"->"Virus";
+"Mushroom"->"big size";
+"big size"->"Virus";
 "Virus"[shape = "circle", color = "burlywood1"]
+"big size"->"bacteria";
+"bacteria"[shape = "circle", color = "burlywood1"]
 "Mushroom"->"Can kill you";
 "Can kill you"->"Lisichka";
 "Lisichka"[shape = "circle", color = "burlywood1"]
@@ -27,6 +30,9 @@ node [shape = "rectangle", style = "filled"]
 "Has legs"->"Crocodile";
 "Crocodile"[shape = "circle", color = "burlywood1"]
 "Mammal"->"Has tail";
-"Has tail"->"Cat";
+"Has tail"->"Has nails";
+"Has nails"->"Cat";
 "Cat"[shape = "circle", color = "burlywood1"]
+"Has nails"->"bird";
+"bird"[shape = "circle", color = "burlywood1"]
 } 

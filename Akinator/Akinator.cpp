@@ -1,47 +1,21 @@
 #include "Akinator.h"
 #include <string_view>
 
-void FillSpace(size_t n, FILE* ptr) {
-    for (size_t i = 0; i < n; ++i) {
-        fputc(' ', ptr);
+void Akinator::ReserveBuffer() {
+    if (game_tree.string_buffer.capacity() < game_tree.string_buffer.size() + CAPACITY) {
+        game_tree.string_buffer.reserve(STRING_CAPACITY * 2);
     }
-}
-
-void ReadAnswer(char* answer) {
-    *answer = getc(stdin);
-    while (*answer == '\n') {
-        *answer = getc(stdin);
-    }
-    getc(stdin);
-}
-
-int ReadInput(char* str) {
-    fgets(str, CAPACITY, stdin);
-    int size = 0;
-    while (str[size] != '\n') {
-        size += 1;
-    }
-    return size;
 }
 
 Akinator::Akinator() {
     game_tree = Tree();
 }
 
-void Akinator::StartGame() {
-    char answer = 0;
-    while (answer != 'n') {
-//        if (game_tree.tree_.empty()) {
-//            FirstLaunch();
-//        }
-//        Descent();
-        CompareWords();
-
-        printf("Do you want to continue?\n");
-        ReadAnswer(&answer);
+void Akinator::Train() {
+    if (game_tree.tree_.empty()) {
+        FirstLaunch();
     }
-    SaveData("../data/data");
-    CreateVisualization(PATH_TO_VISUAL);
+    Descent();
 }
 
 void Akinator::Descent() {
@@ -127,6 +101,8 @@ void Akinator::InsertProperty(char *str, size_t current_node, size_t parent) {
     size_t prev_index = game_tree.string_buffer.size();
     size_t added_num = game_tree.tree_.size();
 
+    ReserveBuffer();
+
     int size = ReadInput(str);
     game_tree.string_buffer += std::basic_string_view(str, size);
 
@@ -159,6 +135,7 @@ void Akinator::FirstLaunch() {
 void Akinator::AddObject(size_t parent, size_t child, char* str) {
     size_t prev_index = game_tree.string_buffer.size();
 
+    ReserveBuffer();
     int size = ReadInput(str);
     game_tree.string_buffer += std::basic_string_view(str, size);
 
@@ -179,7 +156,7 @@ void Akinator::AddObject(size_t parent, size_t child, char* str) {
 
 }
 
-void Akinator::CompareWords() {
+void Akinator::CompareWords(FILE* common, FILE* first, FILE* second) {
     printf("Type first object\n");
 
     char first_word[CAPACITY];
@@ -199,29 +176,49 @@ void Akinator::CompareWords() {
     int common_parent = FindLCA(first_index, second_index);
 
     printf("%s and %s are: ", first_word, second_word);
-    PrintCommon(game_tree.tree_[common_parent].parent, common_parent, 0);
+    fprintf(common, "%s and %s are ", first_word, second_word);
+
+    PrintCommon(game_tree.tree_[common_parent].parent, common_parent, 0, common);
 
     printf("\nDifferences\n%s is/are: ", first_word);
-    PrintCommon(game_tree.tree_[first_index].parent, first_index, common_parent);
+    fprintf(first, "%s is/are", first_word, first_word);
+    PrintCommon(game_tree.tree_[first_index].parent, first_index, common_parent, first);
 
     printf("\n%s is/are: ", second_word);
-    PrintCommon(game_tree.tree_[second_index].parent, second_index, common_parent);
+    fprintf(second, "%s is/are", first_word, second_word);
+    PrintCommon(game_tree.tree_[second_index].parent, second_index, common_parent, second);
     printf("\n");
 }
 
-void Akinator::PrintCommon(int node, int prev, int limit) {
+void Akinator::PrintCommon(int node, int prev, int limit, FILE* output) {
     if (node != limit) {
-        PrintCommon(game_tree.tree_[node].parent, node, limit);
+        PrintCommon(game_tree.tree_[node].parent, node, limit, output);
     }
 
     if (game_tree.tree_[node].left_child == prev && prev != 0) {
         printf("not ");
+
+        fprintf(output, "not ");
     }
 
-    if (prev != 0) PrintNode(node);
+    if (prev != 0) {
+        PrintNode(node);
+        SaveVoiceText(node, output);
+    }
 
     putc(',', stdout);
     putc(' ', stdout);
+}
+
+void Akinator::SaveVoiceText(int node, FILE *output) {
+    size_t index = game_tree.tree_[node].index;
+    size_t len = game_tree.tree_[node].size;
+
+    for (size_t i = 0; i < len; ++i) {
+        fputc(game_tree.string_buffer[index + i], output);
+    }
+
+    fputc('\n', output);
 }
 
 
@@ -250,201 +247,6 @@ void Akinator::PrintNode(size_t node) {
     }
 }
 
-
-
-void Akinator::SaveData(const char *file) {
-    FILE* ptr = fopen(file, "w");
-    fprintf(ptr, "{\n");
-
-    FillSpace(SHIFT, ptr);
-    fputc('"', ptr);
-    for (size_t i = 0; i < game_tree.tree_[0].size; ++i) {
-        fputc(game_tree.string_buffer[game_tree.tree_[0].index + i], ptr);
-    }
-    fputc('"', ptr);
-    WriteFromNode(game_tree.tree_[0].left_child, ptr, SHIFT);
-    WriteFromNode(game_tree.tree_[0].right_child, ptr, SHIFT);
-
-    fputc('\n', ptr);
-    FillSpace(SHIFT, ptr);
-    fputc('}', ptr);
-
-    fclose(ptr);
-
-}
-
-void Akinator::WriteFromNode(size_t node, FILE* ptr, size_t space_n) {
-    space_n += SHIFT;
-
-    if (!node) {
-        fputc('{', ptr);
-        fputc('}', ptr);
-        return;
-    }
-
-    fputc('{', ptr);
-    fputc('\n', ptr);
-
-    FillSpace(space_n, ptr);
-
-    fputc('"', ptr);
-    for (size_t i = 0; i < game_tree.tree_[node].size; ++i) {
-        fputc(game_tree.string_buffer[game_tree.tree_[node].index + i], ptr);
-    }
-    fputc('"', ptr);
-
-    WriteFromNode(game_tree.tree_[node].left_child, ptr, space_n);
-    WriteFromNode(game_tree.tree_[node].right_child, ptr, space_n);
-
-    fputc('\n', ptr);
-    FillSpace(space_n, ptr);
-    fputc('}', ptr);
-}
-
-void Akinator::CreateVisualization(const char *file) {
-    FILE* ptr = fopen(file, "w");
-
-    fprintf(ptr, "digraph Tree { \nnode [shape = \"rectangle\", style = \"filled\"]\n");
-    TraverseForVisualization(0, ptr);
-
-    fprintf(ptr, "} \n");
-    fclose(ptr);
-
-}
-
-void Akinator::PrintForVisual(size_t node, FILE* ptr, size_t turn) {
-    fputc('"', ptr);
-    for (size_t i = 0; i < game_tree.tree_[node].size; ++i) {
-        fputc(game_tree.string_buffer[game_tree.tree_[node].index + i], ptr);
-    }
-    fputc('"', ptr);
-    fputc('-', ptr);
-    fputc('>', ptr);
-
-    if (turn == LEFT) {
-        fputc('"', ptr);
-        for (size_t i = 0; i < game_tree.tree_[game_tree.tree_[node].left_child].size; ++i) {
-            fputc(game_tree.string_buffer[game_tree.tree_[game_tree.tree_[node].left_child].index + i], ptr);
-        }
-        fputc('"', ptr);
-        fputc(';', ptr);
-        fputc('\n', ptr);
-    }
-
-    else if (turn == RIGHT) {
-        fputc('"', ptr);
-        for (size_t i = 0; i < game_tree.tree_[game_tree.tree_[node].right_child].size; ++i) {
-            fputc(game_tree.string_buffer[game_tree.tree_[game_tree.tree_[node].right_child].index + i], ptr);
-        }
-        fputc('"', ptr);
-        fputc(';', ptr);
-
-        fputc('\n', ptr);
-    }
-}
-
-void Akinator::TraverseForVisualization(size_t node, FILE *ptr) {
-
-    if (game_tree.tree_[node].left_child != 0) {
-
-        PrintForVisual(node, ptr, LEFT);
-
-        TraverseForVisualization(game_tree.tree_[node].left_child, ptr);
-    }
-
-    if (game_tree.tree_[node].right_child != 0) {
-
-        PrintForVisual(node, ptr, RIGHT);
-
-        TraverseForVisualization(game_tree.tree_[node].right_child, ptr);
-    }
-
-    if (game_tree.tree_[node].left_child == 0 && game_tree.tree_[node].right_child == 0) {
-        fputc('"', ptr);
-        for (size_t i = 0; i < game_tree.tree_[node].size; ++i) {
-            fputc(game_tree.string_buffer[game_tree.tree_[node].index + i], ptr);
-        }
-        fputc('"', ptr);
-        fprintf(ptr, "[shape = \"circle\", color = \"burlywood1\"]\n");
-    }
-}
-
-
-int  ParseDataFile(FILE* file, char* text) {
-    char symbol = 0;
-    int size = 0;
-
-    while (symbol != '{') {
-        symbol = fgetc(file);
-        if (symbol == EOF) return -1;
-    }
-
-    while (symbol != '"') {
-        symbol = fgetc(file);
-        if (symbol == '}') return size;
-    }
-
-    while ((symbol = (fgetc(file))) != '"') {
-        if (symbol == '?') continue;
-        text[size] = symbol;
-        size += 1;
-    }
-
-    return size;
-}
-
-void Akinator::PreOrder(size_t parent, size_t turn, char* str, FILE* ptr) {
-    int size = ParseDataFile(ptr, str);
-    if (size <= 0) return;
-
-    game_tree.AddNode(0, 0, game_tree.string_buffer.size(), size);
-
-    std::string_view string(str, size);
-    game_tree.string_buffer += string;
-
-    if (turn == LEFT) {
-        game_tree.tree_[parent].left_child = game_tree.tree_.size() - 1;
-        game_tree.tree_[game_tree.tree_[parent].left_child].parent = parent;
-        game_tree.tree_[game_tree.tree_[parent].left_child].depth = game_tree.tree_[parent].depth + 1;
-    }
-
-    else {
-        game_tree.tree_[parent].right_child = game_tree.tree_.size() - 1;
-        game_tree.tree_[game_tree.tree_[parent].right_child].parent = parent;
-        game_tree.tree_[game_tree.tree_[parent].right_child].depth = game_tree.tree_[parent].depth + 1;
-    }
-
-
-    size =  game_tree.tree_.size() - 1;
-
-    PreOrder(size, 0, str, ptr);
-    PreOrder( size, 1, str, ptr);
-
-    if (game_tree.tree_[size].left_child == 0 && game_tree.tree_[size].right_child == 0) {
-        UpdateHashTable(size);
-    }
-
-}
-
-void Akinator::ReadData(const char *file) {
-    FILE* ptr = fopen(file, "r");
-
-    char str[CAPACITY];
-    int size = ParseDataFile(ptr, str);
-
-    if (size <= 0) return;
-
-    game_tree.AddNode(0, 0, game_tree.string_buffer.size(), size);
-
-    std::string_view string(str, size);
-    game_tree.string_buffer += string;
-
-    PreOrder(0, LEFT, str, ptr);
-
-    PreOrder(0, RIGHT, str, ptr);
-
-    fclose(ptr);
-}
 
 void Akinator::UpdateHashTable(int node) {
     table[std::string_view(game_tree.string_buffer.data() + game_tree.tree_[node].index,

@@ -25,3 +25,9 @@ public:
     void AddNode(size_t left, size_t right, size_t index, size_t size);
 
 };
+
+void FillSpace(size_t n, FILE* ptr);
+
+void ReadAnswer(char* answer);
+
+int ReadInput(char* str);
