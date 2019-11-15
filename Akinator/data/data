@@ -1,14 +1,41 @@
-animal?
-knife
-
-
-ears?
-eyes?
-dog
-
-
-snake
-
-
-elephant
-
+{
+  "Alive"{
+    "Can hurt you"{
+      "Table"{}{}
+      }{
+      "easy to buy"{
+        "Gun"{}{}
+        }{
+        "Made off metal"{
+          "Paper"{}{}
+          }{
+          "Knife"{}{}
+          }
+        }
+      }
+    }{
+    "Animal"{
+      "Mushroom"{
+        "Virus"{}{}
+        }{
+        "Can kill you"{
+          "Lisichka"{}{}
+          }{
+          "Muhomor"{}{}
+          }
+        }
+      }{
+      "Mammal"{
+        "Has legs"{
+          "snake"{}{}
+          }{
+          "Crocodile"{}{}
+          }
+        }{
+        "Has tail"{}{
+          "Cat"{}{}
+          }
+        }
+      }
+    }
+  }

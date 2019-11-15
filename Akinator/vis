@@ -1,28 +1,32 @@
 digraph Tree { 
 node [shape = "rectangle", style = "filled"]
-"animal?"->"Does it have a noise?";
-"Does it have a noise?"->"Is it a weapon?";
-"Is it a weapon?"->"knife";
-"knife"[shape = "circle", color = "burlywood1"]
-"Is it a weapon?"->"pistol";
-"pistol"[shape = "circle", color = "burlywood1"]
-"Does it have a noise?"->"Does it have a fur?";
-"Does it have a fur?"->"wolf";
-"wolf"[shape = "circle", color = "burlywood1"]
-"Does it have a fur?"->"bear";
-"bear"[shape = "circle", color = "burlywood1"]
-"animal?"->"ears?";
-"ears?"->"eyes?";
-"eyes?"->"dog";
-"dog"[shape = "circle", color = "burlywood1"]
-"eyes?"->"snake";
+"Alive"->"Can hurt you";
+"Can hurt you"->"Table";
+"Table"[shape = "circle", color = "burlywood1"]
+"Can hurt you"->"easy to buy";
+"easy to buy"->"Gun";
+"Gun"[shape = "circle", color = "burlywood1"]
+"easy to buy"->"Made off metal";
+"Made off metal"->"Paper";
+"Paper"[shape = "circle", color = "burlywood1"]
+"Made off metal"->"Knife";
+"Knife"[shape = "circle", color = "burlywood1"]
+"Alive"->"Animal";
+"Animal"->"Mushroom";
+"Mushroom"->"Virus";
+"Virus"[shape = "circle", color = "burlywood1"]
+"Mushroom"->"Can kill you";
+"Can kill you"->"Lisichka";
+"Lisichka"[shape = "circle", color = "burlywood1"]
+"Can kill you"->"Muhomor";
+"Muhomor"[shape = "circle", color = "burlywood1"]
+"Animal"->"Mammal";
+"Mammal"->"Has legs";
+"Has legs"->"snake";
 "snake"[shape = "circle", color = "burlywood1"]
-"ears?"->"Does it have legs?";
-"Does it have legs?"->"is it a food?";
-"is it a food?"->"elephant";
-"elephant"[shape = "circle", color = "burlywood1"]
-"is it a food?"->"apple";
-"apple"[shape = "circle", color = "burlywood1"]
-"Does it have legs?"->"human";
-"human"[shape = "circle", color = "burlywood1"]
+"Has legs"->"Crocodile";
+"Crocodile"[shape = "circle", color = "burlywood1"]
+"Mammal"->"Has tail";
+"Has tail"->"Cat";
+"Cat"[shape = "circle", color = "burlywood1"]
 } 

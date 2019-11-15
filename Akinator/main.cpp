@@ -3,7 +3,7 @@
 
 int main() {
     Akinator game;
-    game.ReadData("../data/save");
+    game.ReadData("../data/data");
     game.StartGame();
 
     return 0;

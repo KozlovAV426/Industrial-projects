@@ -1,35 +1,29 @@
-animal?
-Does it have a noise?
-Is it a weapon?
-knife
-
-
-pistol
-
-
-Does it have a fur?
-wolf
-
-
-bear
-
-
-ears?
-eyes?
-dog
-
-
-snake
-
-
-Does it have legs?
-is it a food?
-elephant
-
-
-apple
-
-
-human
-
-
+{
+  "Alive"{
+    "Can hurt you"{
+      "Table"{}{}
+      }{
+      "Gun"{}{}
+      }
+    }{
+    "Animal"{
+      "Mushroom"{
+        "Virus"{}{}
+        }{
+        "Can kill you"{
+          "Lisichka"{}{}
+          }{
+          "Muhomor"{}{}
+          }
+        }
+      }{
+      "Mammal"{
+        "snake"{}{}
+        }{
+        "Has tail"{}{
+          "Cat"{}{}
+          }
+        }
+      }
+    }
+  }

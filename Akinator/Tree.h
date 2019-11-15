@@ -10,6 +10,8 @@ private:
         size_t right_child;
         size_t index;
         size_t size;
+        int parent;
+        int depth;
 
         Node(size_t left_child, size_t right_child, size_t index, size_t size);
     };
@@ -17,12 +19,9 @@ private:
 public:
     std::vector<Node> tree_;
     std::string string_buffer;
-    std::string input;
 
     Tree();
 
     void AddNode(size_t left, size_t right, size_t index, size_t size);
 
 };
-
-void ReadInput(char* str);
