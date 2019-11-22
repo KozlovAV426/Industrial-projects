@@ -1,48 +1,44 @@
 {
-  "Alive"{
-    "Can hurt you"{
-      "Table"{}{}
-      }{
-      "easy to buy"{
-        "Gun"{}{}
+  "alive"{
+    "animal"{
+      "mammal"{
+        "has tail"{
+          "has tall neck"{
+            "giraffe"{}{}
+            }{
+            "cat"{}{}
+            }
+          }{}
         }{
-        "Made off metal"{
-          "Paper"{}{}
+        "has legs"{
+          "crocodile"{}{}
           }{
-          "Knife"{}{}
+          "snake"{}{}
           }
+        }
+      }{
+      "mushroom"{
+        "can kill you"{
+          "muhomor"{}{}
+          }{
+          "lisichka"{}{}
+          }
+        }{
+        "virus"{}{}
         }
       }
     }{
-    "Animal"{
-      "Mushroom"{
-        "big size"{
-          "Virus"{}{}
-          }{
-          "bacteria"{}{}
-          }
+    "can hurt you"{
+      "easy to buy"{
+        "knife"{}{}
         }{
-        "Can kill you"{
-          "Lisichka"{}{}
-          }{
-          "Muhomor"{}{}
-          }
+        "gun"{}{}
         }
       }{
-      "Mammal"{
-        "Has legs"{
-          "snake"{}{}
-          }{
-          "Crocodile"{}{}
-          }
+      "made off metal"{
+        "scissors"{}{}
         }{
-        "Has tail"{}{
-          "Has nails"{
-            "Cat"{}{}
-            }{
-            "bird"{}{}
-            }
-          }
+        "table"{}{}
         }
       }
     }

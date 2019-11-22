@@ -1,5 +1,6 @@
 #include "Tree.h"
 #include "Config.h"
+#include <cstring>
 
 Tree::Tree()
     : tree_(std::vector<Node>())
@@ -42,7 +43,20 @@ int ReadInput(char* str) {
     while (str[size] != '\n') {
         size += 1;
     }
+    str[size] = 0;
     return size;
+}
+
+void SayMessage(const char* text, size_t sz) {
+    uint8_t len = 6;
+
+    char message[CAPACITY * 2] = "echo \"";
+    strcpy(message + len, text);
+
+    char rest[CAPACITY] = "\" | festival --tts";
+    strcpy(message + len + sz, rest);
+
+    system(message);
 }
 
 

@@ -29,4 +29,7 @@ public:
     void PlayTraining();
 
     void PlayDefinitions(const char* common_file, const char* first, const char* second);
+
+    void PlayGame(const char *common_file = PATH_TO_COMMON, const char *first = PATH_TO_FIRST_WORD,
+                  const char *second = PATH_TO_SECOND_WORD);
 };

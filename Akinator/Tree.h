@@ -31,3 +31,5 @@ void FillSpace(size_t n, FILE* ptr);
 void ReadAnswer(char* answer);
 
 int ReadInput(char* str);
+
+void SayMessage(const char* text, size_t sz);

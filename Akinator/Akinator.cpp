@@ -1,5 +1,9 @@
 #include "Akinator.h"
 #include <string_view>
+#include <stack>
+#include <cstring>
+
+
 
 void Akinator::ReserveBuffer() {
     if (game_tree.string_buffer.capacity() < game_tree.string_buffer.size() + CAPACITY) {
@@ -18,61 +22,105 @@ void Akinator::Train() {
     Descent();
 }
 
+bool IsCorrectInput(const char* str) {
+    return (!strcmp(str, "yes") || !strcmp(str, "no") || !strcmp(str, "rather yes") || !strcmp(str, "rather no"));
+}
+
 void Akinator::Descent() {
     size_t current_node = 0;
-    char answer = ' ';
+    int size = 0;
     size_t parent = 0;
     char str[CAPACITY];
+    std::stack<std::pair<int, int>> nodes;
+    nodes.push({0, 0});
 
-    while (game_tree.tree_[current_node].left_child != 0 || game_tree.tree_[current_node].right_child != 0) {
+    while (!nodes.empty()) {
+        current_node = nodes.top().first;
+        parent = nodes.top().second;
+        nodes.pop();
+
+        while (game_tree.tree_[current_node].left_child != 0 || game_tree.tree_[current_node].right_child != 0) {
+            SayNode(current_node);
+            PrintNode(current_node);
+            putc('\n', stdout);
+
+            ReadInput(str);
+
+            while (!IsCorrectInput(str)) {
+                printf("Incorrect input! Try again\n");
+                ReadInput(str);
+            }
+
+            if (!strcmp(str, "yes") || !strcmp(str, "rather yes")) {
+                if (game_tree.tree_[current_node].right_child != 0 && !strcmp(str, "rather yes")) {
+                    nodes.push({game_tree.tree_[current_node].right_child, current_node});
+                }
+
+                if (game_tree.tree_[current_node].left_child != 0) {
+                    parent = current_node;
+                    current_node = game_tree.tree_[current_node].left_child;
+                    continue;
+                }
+
+                if (nodes.empty()) {
+                    AddObject(current_node, LEFT, str);
+                    return;
+                }
+
+                current_node = nodes.top().first;
+                parent = nodes.top().second;
+                nodes.pop();
+
+            } else if (!strcmp(str, "no") || !strcmp(str, "rather no")) {
+                if (game_tree.tree_[current_node].left_child != 0 && !strcmp(str, "rather no")) {
+                    nodes.push({game_tree.tree_[current_node].left_child, current_node});
+                }
+
+                if (game_tree.tree_[current_node].right_child != 0) {
+                    parent = current_node;
+                    current_node = game_tree.tree_[current_node].right_child;
+                    continue;
+                }
+
+                if (nodes.empty()) {
+                    AddObject(current_node, RIGHT, str);
+                    return;
+                }
+
+                current_node = nodes.top().first;
+                parent = nodes.top().second;
+                nodes.pop();
+            }
+        }
+        printf("Maybe it is a ");
+        SayMessage("Maybe it is a ", 14);
+
         PrintNode(current_node);
+        SayNode(current_node);
         putc('\n', stdout);
 
-        ReadAnswer(&answer);
+        ReadInput(str);
 
-        while (answer != 'y' && answer != 'n') {
-            printf("Incorrect input! Try again\n");
-            ReadAnswer(&answer);
+        if (strcmp(str, "yes") && nodes.empty()) {
+            SayMessage("Sorry I don't know it", 21);
+            printf("Type difference between my answer and your object\n");
+            SayMessage("Type difference between my answer and your object", 49);
+
+            size_t added_num = game_tree.tree_.size();
+            InsertProperty(str, current_node, parent);
+
+            printf("Type your object\n");
+            SayMessage("Type your object", 16);
+
+            ReHang(str, added_num, current_node);
         }
 
-        if (answer == 'y') {
-            if (game_tree.tree_[current_node].right_child != 0) {
-                parent = current_node;
-                current_node = game_tree.tree_[current_node].right_child;
-                continue;
-            }
-            AddObject(current_node, RIGHT, str);
-            return;
-        }
-        else {
-            if (game_tree.tree_[current_node].left_child != 0) {
-                parent = current_node;
-                current_node = game_tree.tree_[current_node].left_child;
-                continue;
-            }
-            AddObject(current_node, LEFT, str);
+        else if (!strcmp(str, "yes")){
+            printf("I won\n");
+            SayMessage("I won", 5);
             return;
         }
     }
-    printf("Maybe it is a ");
-    PrintNode(current_node);
-    putc('\n', stdout);
-
-    ReadAnswer(&answer);
-
-    if (answer != 'y') {
-        printf("Type difference between my answer and your object\n");
-        size_t added_num = game_tree.tree_.size();
-        InsertProperty(str, current_node, parent);
-
-        printf("Type your object\n");
-
-        ReHang(str, added_num, current_node);
-    }
-    else {
-        printf("I won\n");
-    }
-    printf("End of session\n\n");
 }
 
 void Akinator::ReHang(char *str, size_t added_num, size_t current_node) {
@@ -81,8 +129,8 @@ void Akinator::ReHang(char *str, size_t added_num, size_t current_node) {
     int size = ReadInput(str);
 
     game_tree.string_buffer += std::basic_string_view(str, size);
-    game_tree.tree_[added_num].right_child = game_tree.tree_.size();
-    game_tree.tree_[added_num].left_child = current_node;
+    game_tree.tree_[added_num].left_child = game_tree.tree_.size();
+    game_tree.tree_[added_num].right_child = current_node;
 
     game_tree.AddNode(0, 0, prev_index, size);
 
@@ -129,11 +177,13 @@ void Akinator::FirstLaunch() {
 
     game_tree.AddNode(0, 0, prev_index, size);
 
-    AddObject(0, RIGHT, str);
+    AddObject(0, LEFT, str);
 }
 
 void Akinator::AddObject(size_t parent, size_t child, char* str) {
     size_t prev_index = game_tree.string_buffer.size();
+    printf("Sorry I dont know it. Type your answer\n");
+    SayMessage("Sorry I dont know it. Type your answer", 38);
 
     ReserveBuffer();
     int size = ReadInput(str);
@@ -158,6 +208,7 @@ void Akinator::AddObject(size_t parent, size_t child, char* str) {
 
 void Akinator::CompareWords(FILE* common, FILE* first, FILE* second) {
     printf("Type first object\n");
+    SayMessage("Type first object", 17);
 
     char first_word[CAPACITY];
     char second_word[CAPACITY];
@@ -165,6 +216,7 @@ void Akinator::CompareWords(FILE* common, FILE* first, FILE* second) {
     int first_sz = ReadInput(first_word);
 
     printf("Type second object\n");
+    SayMessage("Type second object", 18);
     int second_sz = ReadInput(second_word);
 
     first_word[first_sz] = 0;
@@ -180,12 +232,12 @@ void Akinator::CompareWords(FILE* common, FILE* first, FILE* second) {
 
     PrintCommon(game_tree.tree_[common_parent].parent, common_parent, 0, common);
 
-    printf("\nDifferences\n%s is/are: ", first_word);
-    fprintf(first, "%s is/are", first_word, first_word);
+    printf("\nDifferences\n%s is: ", first_word);
+    fprintf(first, "%s is", first_word);
     PrintCommon(game_tree.tree_[first_index].parent, first_index, common_parent, first);
 
-    printf("\n%s is/are: ", second_word);
-    fprintf(second, "%s is/are", first_word, second_word);
+    printf("\n%s is ", second_word);
+    fprintf(second, "%s is", second_word);
     PrintCommon(game_tree.tree_[second_index].parent, second_index, common_parent, second);
     printf("\n");
 }
@@ -195,7 +247,7 @@ void Akinator::PrintCommon(int node, int prev, int limit, FILE* output) {
         PrintCommon(game_tree.tree_[node].parent, node, limit, output);
     }
 
-    if (game_tree.tree_[node].left_child == prev && prev != 0) {
+    if (game_tree.tree_[node].right_child == prev && prev != 0) {
         printf("not ");
 
         fprintf(output, "not ");
@@ -245,6 +297,18 @@ void Akinator::PrintNode(size_t node) {
     for (size_t i = 0; i < len; ++i) {
         putc(game_tree.string_buffer[index + i], stdout);
     }
+}
+
+void Akinator::SayNode(size_t node) {
+    char text[CAPACITY];
+
+    size_t index = game_tree.tree_[node].index;
+    size_t len = game_tree.tree_[node].size;
+
+    for (size_t i = 0; i < len; ++i) {
+        text[i] = game_tree.string_buffer[index + i];
+    }
+    SayMessage(text, len);
 }
 
 

@@ -1,0 +1,29 @@
+{
+    "Alive" {
+        "Can hurt you" {
+            "Table" {} {}
+        } {
+            "Gun" {} {}
+        }
+    } {
+        "Animal" {
+            "Mushroom" {
+                "Virus" {} {}
+            } {
+                "Can kill you" {
+                    "Lisichka" {} {}
+                } {
+                    "Muhomor" {} {}
+                }
+            }
+        } {
+            "Mammal" {
+            } {
+                "Has tail" {
+                } {
+                    "Cat" {} {}
+                }
+            }
+        }
+    }
+}

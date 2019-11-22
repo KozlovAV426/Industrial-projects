@@ -6,6 +6,7 @@ class Akinator {
 private:
     Tree game_tree;
     std::unordered_map<std::string_view, int> table;
+    std::string answer;
 
     void AddObject(size_t parent, size_t child, char* str);
 
@@ -26,6 +27,8 @@ private:
     void SaveVoiceText(int node, FILE* output);
 
     void PrintNode(size_t node);
+
+    void SayNode(size_t node);
 
     void UpdateHashTable(int node);
 

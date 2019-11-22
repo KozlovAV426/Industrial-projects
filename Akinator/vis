@@ -1,38 +1,35 @@
 digraph Tree { 
 node [shape = "rectangle", style = "filled"]
-"Alive"->"Can hurt you";
-"Can hurt you"->"Table";
-"Table"[shape = "circle", color = "burlywood1"]
-"Can hurt you"->"easy to buy";
-"easy to buy"->"Gun";
-"Gun"[shape = "circle", color = "burlywood1"]
-"easy to buy"->"Made off metal";
-"Made off metal"->"Paper";
-"Paper"[shape = "circle", color = "burlywood1"]
-"Made off metal"->"Knife";
-"Knife"[shape = "circle", color = "burlywood1"]
-"Alive"->"Animal";
-"Animal"->"Mushroom";
-"Mushroom"->"big size";
-"big size"->"Virus";
-"Virus"[shape = "circle", color = "burlywood1"]
-"big size"->"bacteria";
-"bacteria"[shape = "circle", color = "burlywood1"]
-"Mushroom"->"Can kill you";
-"Can kill you"->"Lisichka";
-"Lisichka"[shape = "circle", color = "burlywood1"]
-"Can kill you"->"Muhomor";
-"Muhomor"[shape = "circle", color = "burlywood1"]
-"Animal"->"Mammal";
-"Mammal"->"Has legs";
-"Has legs"->"snake";
+"alive"->"animal";
+"animal"->"mammal";
+"mammal"->"has tail";
+"has tail"->"has tall neck";
+"has tall neck"->"giraffe";
+"giraffe"[shape = "circle", color = "burlywood1"]
+"has tall neck"->"cat";
+"cat"[shape = "circle", color = "burlywood1"]
+"mammal"->"has legs";
+"has legs"->"crocodile";
+"crocodile"[shape = "circle", color = "burlywood1"]
+"has legs"->"snake";
 "snake"[shape = "circle", color = "burlywood1"]
-"Has legs"->"Crocodile";
-"Crocodile"[shape = "circle", color = "burlywood1"]
-"Mammal"->"Has tail";
-"Has tail"->"Has nails";
-"Has nails"->"Cat";
-"Cat"[shape = "circle", color = "burlywood1"]
-"Has nails"->"bird";
-"bird"[shape = "circle", color = "burlywood1"]
+"animal"->"mushroom";
+"mushroom"->"can kill you";
+"can kill you"->"muhomor";
+"muhomor"[shape = "circle", color = "burlywood1"]
+"can kill you"->"lisichka";
+"lisichka"[shape = "circle", color = "burlywood1"]
+"mushroom"->"virus";
+"virus"[shape = "circle", color = "burlywood1"]
+"alive"->"can hurt you";
+"can hurt you"->"easy to buy";
+"easy to buy"->"knife";
+"knife"[shape = "circle", color = "burlywood1"]
+"easy to buy"->"gun";
+"gun"[shape = "circle", color = "burlywood1"]
+"can hurt you"->"made off metal";
+"made off metal"->"scissors";
+"scissors"[shape = "circle", color = "burlywood1"]
+"made off metal"->"table";
+"table"[shape = "circle", color = "burlywood1"]
 } 

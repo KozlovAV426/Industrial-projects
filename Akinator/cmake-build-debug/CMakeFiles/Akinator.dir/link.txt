@@ -1,0 +1,1 @@
+/usr/bin/g++  -g   CMakeFiles/Akinator.dir/main.cpp.o CMakeFiles/Akinator.dir/Tree.cpp.o CMakeFiles/Akinator.dir/Akinator.cpp.o CMakeFiles/Akinator.dir/AkinatorManager.cpp.o  -o Akinator 

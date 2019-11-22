@@ -10,3 +10,8 @@ const size_t SHIFT = 2;
 
 static const char* PATH_TO_DATA = "../data/save";
 static const char* PATH_TO_VISUAL = "../vis";
+
+static const char* PATH_TO_COMMON = "./common";
+static const char* PATH_TO_FIRST_WORD = "./first";
+static const char* PATH_TO_SECOND_WORD = "./second";
+

@@ -1,4 +1,5 @@
 #include "AkinatorManager.h"
+#include <cstring>
 
 AkinatorManager::AkinatorManager()
     : akinator(new Akinator())
@@ -8,16 +9,40 @@ AkinatorManager::~AkinatorManager() {
     delete akinator;
 }
 
+void AkinatorManager::PlayGame(const char *common_file, const char *first, const char *second) {
+    char input[CAPACITY];
 
-void AkinatorManager::PlayTraining() {
-    char answer = 0;
-    while (answer != 'n') {
+    while (strcmp(input, "no")) {
 
-        akinator->Train();
+        SayMessage("Hello, choose your mode", 23);
+        printf("Hello, choose your mode (train, definition)\n");
+
+        ReadInput(input);
+
+        while (strcmp(input, "train") && strcmp(input, "definition")) {
+            SayMessage("Incorrect, type again", 21);
+            ReadInput(input);
+        }
+
+        if (!strcmp(input, "train")) {
+            PlayTraining();
+        }
+        else {
+            PlayDefinitions(common_file, first, second);
+        }
 
         printf("Do you want to continue?\n");
-        ReadAnswer(&answer);
+        SayMessage("Do you want to continue?", 24);
+
+        ReadInput(input);
+
     }
+}
+
+
+void AkinatorManager::PlayTraining() {
+    akinator->Train();
+
     SaveData("../data/data");
 }
 
@@ -26,14 +51,7 @@ void AkinatorManager::PlayDefinitions(const char* common_file, const char* first
     FILE* first_f = fopen(first, "w");
     FILE* second_f = fopen(second, "w");
 
-    char answer = 0;
-    while (answer != 'n') {
-
-        akinator->CompareWords(common, first_f, second_f);
-
-        printf("Do you want to continue?\n");
-        ReadAnswer(&answer);
-    }
+    akinator->CompareWords(common, first_f, second_f);
 
     fclose(common);
     fclose(first_f);
