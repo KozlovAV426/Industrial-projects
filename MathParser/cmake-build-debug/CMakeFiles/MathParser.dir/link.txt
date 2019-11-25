@@ -1,0 +1,1 @@
+/usr/bin/g++  -g   CMakeFiles/MathParser.dir/main.cpp.o CMakeFiles/MathParser.dir/Sources/Tree.cpp.o CMakeFiles/MathParser.dir/Sources/TreeManager.cpp.o  -o MathParser 

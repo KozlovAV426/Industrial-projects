@@ -1,0 +1,83 @@
+digraph Tree { 
+node [shape = "rectangle", style = "filled"]
+node93923237663280 [label = "*"];
+node93923237663808 [label = "+"];
+node93923237663280 -> node93923237663808;
+node93923237663808 [label = "+"];
+node93923237663856 [label = "0"];
+node93923237663856 [shape = "circle", color = "burlywood1"]
+node93923237663808 -> node93923237663856;
+node93923237663856 [label = 0];
+node93923237663808 [label = "+"];
+node93923237663904 [label = "*"];
+node93923237663808 -> node93923237663904;
+node93923237663904 [label = "*"];
+node93923237663952 [label = "cos"];
+node93923237663904 -> node93923237663952;
+node93923237663952 [label = "cos"];
+node93923237664000 [label = "*"];
+node93923237663952 -> node93923237664000;
+node93923237664000 [label = "*"];
+node93923237664048 [label = "3"];
+node93923237664048 [shape = "circle", color = "burlywood1"]
+node93923237664000 -> node93923237664048;
+node93923237664048 [label = 3];
+node93923237664000 [label = "*"];
+node93923237664096 [label = "7"];
+node93923237664096 [shape = "circle", color = "burlywood1"]
+node93923237664000 -> node93923237664096;
+node93923237664096 [label = 7];
+node93923237663904 [label = "*"];
+node93923237664144 [label = "*"];
+node93923237663904 -> node93923237664144;
+node93923237664144 [label = "*"];
+node93923237664192 [label = "3"];
+node93923237664192 [shape = "circle", color = "burlywood1"]
+node93923237664144 -> node93923237664192;
+node93923237664192 [label = 3];
+node93923237664144 [label = "*"];
+node93923237664240 [label = "0"];
+node93923237664240 [shape = "circle", color = "burlywood1"]
+node93923237664144 -> node93923237664240;
+node93923237664240 [label = 0];
+node93923237663280 [label = "*"];
+node93923237663328 [label = "*"];
+node93923237663280 -> node93923237663328;
+node93923237663328 [label = "*"];
+node93923237663376 [label = "3"];
+node93923237663376 [shape = "circle", color = "burlywood1"]
+node93923237663328 -> node93923237663376;
+node93923237663376 [label = 3];
+node93923237663328 [label = "*"];
+node93923237663424 [label = "**"];
+node93923237663328 -> node93923237663424;
+node93923237663424 [label = "**"];
+node93923237663472 [label = "+"];
+node93923237663424 -> node93923237663472;
+node93923237663472 [label = "+"];
+node93923237663520 [label = "2"];
+node93923237663520 [shape = "circle", color = "burlywood1"]
+node93923237663472 -> node93923237663520;
+node93923237663520 [label = 2];
+node93923237663472 [label = "+"];
+node93923237663568 [label = "sin"];
+node93923237663472 -> node93923237663568;
+node93923237663568 [label = "sin"];
+node93923237663616 [label = "*"];
+node93923237663568 -> node93923237663616;
+node93923237663616 [label = "*"];
+node93923237663664 [label = "3"];
+node93923237663664 [shape = "circle", color = "burlywood1"]
+node93923237663616 -> node93923237663664;
+node93923237663664 [label = 3];
+node93923237663616 [label = "*"];
+node93923237663712 [label = "7"];
+node93923237663712 [shape = "circle", color = "burlywood1"]
+node93923237663616 -> node93923237663712;
+node93923237663712 [label = 7];
+node93923237663424 [label = "**"];
+node93923237663760 [label = "2"];
+node93923237663760 [shape = "circle", color = "burlywood1"]
+node93923237663424 -> node93923237663760;
+node93923237663760 [label = 2];
+} 

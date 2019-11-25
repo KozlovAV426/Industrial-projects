@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/anatoly/projects/MathParser/Headers/Constants.h
+cstdlib
+-
+
+/home/anatoly/projects/MathParser/Headers/Tree.h
+vector
+-
+stdint.h
+-
+stdio.h
+-
+
+/home/anatoly/projects/MathParser/Sources/Tree.cpp
+cstdio
+-
+ctype.h
+-
+cstdlib
+-
+cstring
+-
+cassert
+-
+cmath
+-
+../Headers/Tree.h
+/home/anatoly/projects/MathParser/Headers/Tree.h
+../Headers/Constants.h
+/home/anatoly/projects/MathParser/Headers/Constants.h
+
